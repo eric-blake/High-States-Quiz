@@ -2,20 +2,33 @@
 const playButton = document.getElementById('play-btn')
 const welcomeContainer =document.getElementById('welcome-container')
 const questionContainer =document.getElementById('question-container')
+const question =document.getElementById('question')
 
 
 playButton.addEventListener('click', playQuiz)
 
 /**
- * Play quiz function
+ * Play quiz function starts the quiz after the play button is pressed. It removes the play button and add the questions and answer section
  */
  function playQuiz() {
     playButton.classList.add('hide')
     welcomeContainer.classList.add('hide')
     questionContainer.classList.remove('hide')
+    getRandomQuestion()
 }
 
- 
+ function  getRandomQuestion() {
+    //selectng random question concept from stack overflow  https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
+    const randomIndex = array[Math.floor(Math.random() * array.length)]; 
+    currentQuestion = questions[randomIndex]
+    question.innerText = currentQuestion.question;
+ }
+
+
+
+
+
+
 
 // Questions and answers
 

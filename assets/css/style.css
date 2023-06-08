@@ -75,3 +75,8 @@ body {
     border-radius: 10px;
 
 }
+
+/* hide buttons */
+.hide {
+    display: none
+}

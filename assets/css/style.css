@@ -47,13 +47,6 @@ body {
     color: blue;
 }
 
-
-.answer-btn {
-    margin: 10px;
-    border-radius: 10px;
-
-}
-
 #next {
     text-align: center;
 }
@@ -75,4 +68,10 @@ body {
     grid-template-rows: 100px 100px;
     border-width: 3px;
     border-color: blue;
+}
+
+.answer-btn {
+    margin: 10px;
+    border-radius: 10px;
+
 }

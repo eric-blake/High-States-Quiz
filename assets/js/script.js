@@ -4,6 +4,9 @@ const welcomeContainer =document.getElementById('welcome-container')
 const questionContainer =document.getElementById('question-container')
 const question =document.getElementById('question')
 
+let currentQuestion
+let availableQuestions
+
 
 playButton.addEventListener('click', playQuiz)
 
@@ -20,7 +23,9 @@ playButton.addEventListener('click', playQuiz)
  function  getRandomQuestion() {
     //selectng random question concept from stack overflow  https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
     const randomIndex = array[Math.floor(Math.random() * array.length)]; 
-    currentQuestion = questions[randomIndex]
+    currentQuestion = availableQuestions[randomIndex]
+
+    //Update question in question container
     question.innerText = currentQuestion.question;
  }
 

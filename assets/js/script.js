@@ -12,6 +12,11 @@ let currentQuestionIndex
 
 playButton.addEventListener('click', playQuiz)
 
+nextButton.addEventListener('click' ,() => {
+    currentQuestionIndex++;
+    getQuestion();
+})
+
 /**
  * Play quiz function starts the quiz after the play button is pressed. It removes the play button and add the questions and answer section
  */
@@ -58,19 +63,22 @@ function resetQuestionContainer  () {
     }
 }
 
-function selectAnswer() {
-const selectedButton=e.target //get the button we clicked on
-const correct = selectedButton.dataset.correct
-Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button,button.dataset.correct)
-})
-if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
-    nextButton.classList.remove('hide')
-} else {
-    playButton.innerText = 'restart'
-    playButton.classList.remove('hide')
-}
-}
+function selectAnswer(e) {
+    const selectedButton = e.target //get the button we clicked on
+    const correct = selectedButton.dataset.correct
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setAnswerStatus(button,button.dataset.correct)
+    })
+    if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
+        nextButton.classList.remove('hide')
+    } else {
+        playButton.innerText = 'restart'
+        playButton.classList.remove('hide')
+    }
+    
+    
+    
+    }
 
 
 //Color code correct and incorrect answers
@@ -82,12 +90,12 @@ function setAnswerStatus (element, correct) {
     }
     else {
     element.classList.add('wrong')
-    updateIncorrectScore () 
+
 }
     }
 
 
-function clearAnserStatus (element)  {
+function clearAnswerStatus (element)  {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }

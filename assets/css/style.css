@@ -75,6 +75,17 @@ body {
     border-radius: 10px;
 
 }
+/* 
+Correct and incorrect answers */
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
+
 
 /* hide buttons */
 .hide {

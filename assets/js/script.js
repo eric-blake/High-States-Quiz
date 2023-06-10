@@ -3,8 +3,9 @@ const playButton = document.getElementById('play-btn')
 const welcomeContainer = document.getElementById('welcome-container')
 const questionContainer = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
+const answerButtonsElement = document.getElementById('answer-buttons')
 
-let shuffledQuestions=0
+let shuffledQuestions
 let currentQuestionIndex
 
 
@@ -17,7 +18,9 @@ function playQuiz() {
     playButton.classList.add('hide')
     welcomeContainer.classList.add('hide')
     questionContainer.classList.remove('hide')
-    shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
+
+   //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
+   shuffledQuestions=questions.sort(() => Math.random() - .5)  // gets a randow question
     currentQuestionIndex = 0  //set to 0 as we are starting on first question
     getQuestion();
 }
@@ -25,15 +28,29 @@ function playQuiz() {
 // GetQuestipon and show question concept from tutorial https://www.youtube.com/watch?v=riDzcEQbX6k
 
 function getQuestion() {
-    questionElement.innerText=shuffledQuestions.question
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 
 }
-
 function showQuestion(question) {
-     questionElement.innerText=question.question
+    questionElement.innerText=question.question
+    
+    question.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText=answer.text;
+        button.classList.add('answer-btn','btn');
+         if (answer.correct) {
+         button.dataset.correct =answer.correct //add data attribute of corrrect on to the button
+        }
+        button.addEventListener('click', selectAnswer);
+        answerButtonsElement.appendChild(button);
+        
+    })
+     }
+    
 
- }
+function selectAnswer() {
+
+}
 
 
 

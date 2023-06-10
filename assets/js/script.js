@@ -17,25 +17,23 @@ function playQuiz() {
     playButton.classList.add('hide')
     welcomeContainer.classList.add('hide')
     questionContainer.classList.remove('hide')
-
-
-    //shuffledQuestions=questions.sort(() => Math.random() - .5)  // gets a randow question
     shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
-    //currentQuestionIndex = 0  //set to 0 as we are starting on first question
+    currentQuestionIndex = 0  //set to 0 as we are starting on first question
     getQuestion();
 }
 
+// GetQuestipon and show question concept from tutorial https://www.youtube.com/watch?v=riDzcEQbX6k
 
 function getQuestion() {
     questionElement.innerText=shuffledQuestions.question
-    // showQuestion(shuffledQuestions[currentQuestionIndex]);
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 
 }
 
-// function showQuestion(question) {
-//     questionElement.innerText=question.question
+function showQuestion(question) {
+     questionElement.innerText=question.question
 
-// }
+ }
 
 
 

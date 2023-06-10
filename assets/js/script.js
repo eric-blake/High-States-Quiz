@@ -59,9 +59,38 @@ function resetQuestionContainer  () {
 }
 
 function selectAnswer() {
-
+const selectedButton=e.target //get the button we clicked on
+const correct = selectedButton.dataset.correct
+Array.from(answerButtonsElement.children).forEach(button => {
+    setStatusClass(button,button.dataset.correct)
+})
+if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
+    nextButton.classList.remove('hide')
+} else {
+    playButton.innerText = 'restart'
+    playButton.classList.remove('hide')
+}
 }
 
+
+//Color code correct and incorrect answers
+function setAnswerStatus (element, correct) {
+    clearAnswerStatus (element)
+    if (correct) {
+        element.classList.add('correct')
+
+    }
+    else {
+    element.classList.add('wrong')
+    updateIncorrectScore () 
+}
+    }
+
+
+function clearAnserStatus (element)  {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+}
 
 
 

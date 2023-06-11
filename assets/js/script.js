@@ -6,6 +6,9 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const nextButton =document.getElementById('next-btn')
 const scoreBoardContainer = document.getElementById('scoreboard-container')
+const score = document.getElementById('score')
+const incorrectScore = document.getElementById('incorrect')
+
 
 const answerButtoneOne =document.getElementById('answer-btn-1')
 const answerButtoneTwo=document.getElementById('answer-btn-2')
@@ -14,6 +17,7 @@ const answerButtonfour =document.getElementById('answer-btn-4')
 
 let shuffledQuestions
 let currentQuestionIndex
+
 
 
 playButton.addEventListener('click', playQuiz)
@@ -32,9 +36,10 @@ function playQuiz() {
     questionContainer.classList.remove('hide')
     scoreBoardContainer.classList.remove('hide-scoreboard')
    //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
-   shuffledQuestions=questions.sort(() => Math.random() - .5)  // gets a randow question
+    shuffledQuestions=questions.sort(() => Math.random() - .5)  // gets a randow question
     currentQuestionIndex = 0  //set to 0 as we are starting on first question
     getQuestion();
+ 
 }
 
 // Get Question and show question concept from tutorial https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -42,24 +47,26 @@ function playQuiz() {
 function getQuestion() {
     resetQuestionContainer()
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-
+    
 }
 
-function showQuestion(question) {
-    questionElement.innerText=question.question
+function showQuestion(query) {
+    questionElement.innerText=query.query //renamed question to query to make easier to read
     
-    question.answers.forEach(answer => {
+    //loop through the question answers, get single answer and create a button for each
+    query.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText=answer.text;
         button.classList.add('answer-btn','btn');
          if (answer.correct) {
-         button.dataset.correct =answer.correct //add data attribute of correct on to the button
+         button.dataset.correct =answer.correct //add data attribute to the correct button
+    
         }
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
-       
-        
+
     })
+    
      }
     
 
@@ -68,6 +75,7 @@ function resetQuestionContainer  () {
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
+  
 }
 
 function selectAnswer(e) {
@@ -98,7 +106,7 @@ function setAnswerStatus (element, correct) {
     }
     else {
     element.classList.add('wrong')
-
+    updateIncorrectScore ()
  }
     }
 
@@ -109,13 +117,31 @@ function clearAnswerStatus (element)  {
 }
 
 
+// Concept from Love Maths project
+function incrementScore () {
+    let oldScore=parseInt(document.getElementById('score').innerText);
+    if (correct) {
+        document.getElementById('score').innerText = ++oldScore;
+    }
+
+    console.log(score)
+
+}
+
+function updateIncorrectScore () {
+    let oldScore=parseInt(document.getElementById('incorrect').innerText);
+    document.getElementById('incorrect').innerText = ++oldScore;
+ }
+
+
+
 
 
 // Questions and answers
 
 const questions = [{
 
-    question: "What state is know as The golden State",
+    query: "What state is know as The golden State",
     answers: [{
         text: "California",
         correct: true
@@ -137,7 +163,7 @@ const questions = [{
 },
 
 {
-    question: 'What state is know as "The Grand Canyon State"',
+    query: 'What state is know as "The Grand Canyon State"',
     answers: [{
         text: "Arizona ",
         correct: true
@@ -159,7 +185,7 @@ const questions = [{
 },
 
 {
-    question: 'What state is know as "The Last Frontier state"',
+    query: 'What state is know as "The Last Frontier state"',
     answers: [{
         text: "Alaska",
         correct: true
@@ -181,7 +207,7 @@ const questions = [{
 },
 
 {
-    question: 'What state is know as "The Empire State"',
+    query: 'What state is know as "The Empire State"',
     answers: [{
         text: "New York",
         correct: true

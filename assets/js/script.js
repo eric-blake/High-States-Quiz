@@ -8,7 +8,7 @@ const nextButton =document.getElementById('next-btn')
 const scoreBoardContainer = document.getElementById('scoreboard-container')
 const score = document.getElementById('score')
 const incorrectScore = document.getElementById('incorrect')
-
+const timer =document.getElementById('timer')
 
 const answerButtoneOne =document.getElementById('answer-btn-1')
 const answerButtoneTwo=document.getElementById('answer-btn-2')
@@ -41,6 +41,7 @@ function playQuiz() {
     getQuestion();
     score.innerText=0;
     incorrect.innerText=0;
+    StartTimer ();
 }
 
 // Get Question and show question concept from tutorial https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -143,6 +144,12 @@ function updateIncorrectScore () {
  }
 
 
+
+ //countdown timer
+ function StartTimer () {
+    let time=60;
+
+ }
 
 
 

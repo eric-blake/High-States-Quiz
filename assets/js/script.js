@@ -14,6 +14,7 @@ const answerButtoneOne =document.getElementById('answer-btn-1')
 const answerButtoneTwo=document.getElementById('answer-btn-2')
 const answerButtonThree =document.getElementById('answer-btn-3')
 const answerButtonfour =document.getElementById('answer-btn-4')
+const gameOverModal =document.getElementById('gameover-modal-container')
 
 let shuffledQuestions
 let currentQuestionIndex
@@ -150,27 +151,27 @@ function updateIncorrectScore () {
  //countdown timer
  // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
  function countDowntimer () {
-        let currentTime=20;
+        let currentTime=5;
         quizTimer =setInterval( function () {
             currentTime--;
 
             if (currentTime >= 0) {
             timerContainer.textContent=currentTime;
             }
-            else if (currentTime === 0) {
-               
+            else if (currentTime === -1) {
+                clearInterval(quizTimer)
+                questionContainer.classList.add('hide')
+                gameOverModal.classList.remove('hide')
+
+   
             }
         },
             1000);
         }
           
  
- function resetTimer() {
-    clearInterval(quizTimer)
- }
 
 
- 
 
 // Questions and answers
 

@@ -129,8 +129,14 @@ Correct and incorrect answers */
     flex-direction: column;
     align-items: center;
     gap:20px;
+    border: 1px solid;
+    padding:20px;
+    max-width:600px;
+    margin:auto;
+  
   }
 
   #gameover-modal-container {
-    border: 1px solid;
+box-sizing: border-box;
+  Margin: 0 auto
   }

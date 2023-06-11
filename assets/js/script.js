@@ -39,7 +39,8 @@ function playQuiz() {
     shuffledQuestions=questions.sort(() => Math.random() - .5)  // gets a randow question
     currentQuestionIndex = 0  //set to 0 as we are starting on first question
     getQuestion();
- 
+    score.innerText=0;
+    incorrect.innerText=0;
 }
 
 // Get Question and show question concept from tutorial https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -75,6 +76,8 @@ function resetQuestionContainer  () {
     while (answerButtonsElement.firstChild) {   //Loop through all the children for answer button elements and remove first child
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
+ 
+
   
 }
 
@@ -100,6 +103,7 @@ function selectAnswer(e) {
     } else {
         playButton.innerText = 'Play again'
         playButton.classList.remove('hide')
+        
     }
     
    
@@ -130,9 +134,6 @@ function clearAnswerStatus (element)  {
 function incrementScore () {
     let oldScore=parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++oldScore;
-
-
-    console.log(score)
 
 }
 

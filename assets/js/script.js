@@ -154,17 +154,22 @@ function updateIncorrectScore () {
         quizTimer =setInterval( function () {
             currentTime--;
 
-            if (currentTime > 0) {
+            if (currentTime >= 0) {
             timerContainer.textContent=currentTime;
             }
-            else if (currentTime < 0) {
-                clearInterval(quizTimer)
+            else if (currentTime === 0) {
+               
             }
         },
             1000);
         }
           
  
+ function resetTimer() {
+    clearInterval(quizTimer)
+ }
+
+
  
 
 // Questions and answers

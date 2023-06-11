@@ -21,6 +21,7 @@ let currentQuestionIndex
 
 
 
+
 playButton.addEventListener('click', playQuiz)
 
 nextButton.addEventListener('click' ,() => {
@@ -42,7 +43,7 @@ function playQuiz() {
     getQuestion();
     score.innerText=0;
     incorrect.innerText=0;
-    countDowntimer () 
+    countDowntimer ()
 }
 
 // Get Question and show question concept from tutorial https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -147,19 +148,24 @@ function updateIncorrectScore () {
 
 
  //countdown timer
+ // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
  function countDowntimer () {
-    let currentTime=50;
-        currentTime--;
-        timerContainer.textContent=currentTime;
+        let currentTime=20;
+        quizTimer =setInterval( function () {
+            currentTime--;
 
-        if (currentTime ===0) {
-           clearInterval(timer)
+            if (currentTime > 0) {
+            timerContainer.textContent=currentTime;
+            }
+            else if (currentTime < 0) {
+                clearInterval(quizTimer)
+            }
+        },
+            1000);
         }
-        
-        let timer =setInterval(countDowntimer,1000)
- }
-
-
+          
+ 
+ 
 
 // Questions and answers
 

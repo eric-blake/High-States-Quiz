@@ -5,6 +5,12 @@ const questionContainer = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const nextButton =document.getElementById('next-btn')
+const scoreBoardContainer = document.getElementById('scoreboard-container')
+
+const answerButtoneOne =document.getElementById('answer-btn-1')
+const answerButtoneTwo=document.getElementById('answer-btn-2')
+const answerButtonThree =document.getElementById('answer-btn-3')
+const answerButtonfour =document.getElementById('answer-btn-4')
 
 let shuffledQuestions
 let currentQuestionIndex
@@ -24,7 +30,7 @@ function playQuiz() {
     playButton.classList.add('hide')
     welcomeContainer.classList.add('hide')
     questionContainer.classList.remove('hide')
-
+    scoreBoardContainer.classList.remove('hide')
    //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
    shuffledQuestions=questions.sort(() => Math.random() - .5)  // gets a randow question
     currentQuestionIndex = 0  //set to 0 as we are starting on first question
@@ -51,6 +57,7 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
+       
         
     })
      }
@@ -65,14 +72,15 @@ function resetQuestionContainer  () {
 
 function selectAnswer(e) {
     const selectedButton = e.target //get the button we clicked on
-    const correct = selectedButton.dataset.correct
+    const correct = selectedButton.dataset.correct;
     Array.from(answerButtonsElement.children).forEach(button => {
         setAnswerStatus(button,button.dataset.correct)
+       
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
         nextButton.classList.remove('hide')
     } else {
-        playButton.innerText = 'restart'
+        playButton.innerText = 'Play again'
         playButton.classList.remove('hide')
     }
     
@@ -86,12 +94,12 @@ function setAnswerStatus (element, correct) {
     clearAnswerStatus (element)
     if (correct) {
         element.classList.add('correct')
-
+        //element.classList.add('blink')
     }
     else {
     element.classList.add('wrong')
 
-}
+ }
     }
 
 

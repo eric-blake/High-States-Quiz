@@ -96,9 +96,10 @@ Correct and incorrect answers */
 
 
 /* hide buttons */
-.hide {
+.hide,.hide-scoreboard  {
     display: none
 }
+
 
 /* flash green when right answer */
 
@@ -110,4 +111,13 @@ Correct and incorrect answers */
     50% {
       opacity: 0;
     }
+  }
+
+/* 
+  Scoreboard container */
+  #scoreboard{
+    display:flex;
+    justify-content:center;
+    flex-direction: row;
+    gap:20px;
   }

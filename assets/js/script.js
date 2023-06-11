@@ -30,7 +30,7 @@ function playQuiz() {
     playButton.classList.add('hide')
     welcomeContainer.classList.add('hide')
     questionContainer.classList.remove('hide')
-    scoreBoardContainer.classList.remove('hide')
+    scoreBoardContainer.classList.remove('hide-scoreboard')
    //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
    shuffledQuestions=questions.sort(() => Math.random() - .5)  // gets a randow question
     currentQuestionIndex = 0  //set to 0 as we are starting on first question

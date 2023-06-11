@@ -72,7 +72,7 @@ function showQuestion(query) {
 
 function resetQuestionContainer  () {
     nextButton.classList.add('hide')
-    while (answerButtonsElement.firstChild) {
+    while (answerButtonsElement.firstChild) {   //Loop through all the children for answer button elements and remove first child
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
   
@@ -81,6 +81,16 @@ function resetQuestionContainer  () {
 function selectAnswer(e) {
     const selectedButton = e.target //get the button we clicked on
     const correct = selectedButton.dataset.correct;
+
+    if (correct) {
+        incrementScore ()
+    }
+
+    else {
+        updateIncorrectScore ()
+    }
+
+    //set the status for all four buttons
     Array.from(answerButtonsElement.children).forEach(button => {
         setAnswerStatus(button,button.dataset.correct)
        
@@ -92,8 +102,7 @@ function selectAnswer(e) {
         playButton.classList.remove('hide')
     }
     
-    
-    
+   
     }
 
 
@@ -106,7 +115,7 @@ function setAnswerStatus (element, correct) {
     }
     else {
     element.classList.add('wrong')
-    updateIncorrectScore ()
+   
  }
     }
 
@@ -120,9 +129,8 @@ function clearAnswerStatus (element)  {
 // Concept from Love Maths project
 function incrementScore () {
     let oldScore=parseInt(document.getElementById('score').innerText);
-    if (correct) {
-        document.getElementById('score').innerText = ++oldScore;
-    }
+    document.getElementById('score').innerText = ++oldScore;
+
 
     console.log(score)
 

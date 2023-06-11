@@ -8,7 +8,7 @@ const nextButton =document.getElementById('next-btn')
 const scoreBoardContainer = document.getElementById('scoreboard-container')
 const score = document.getElementById('score')
 const incorrectScore = document.getElementById('incorrect')
-const timer =document.getElementById('timer')
+const timerContainer =document.getElementById('timer')
 
 const answerButtoneOne =document.getElementById('answer-btn-1')
 const answerButtoneTwo=document.getElementById('answer-btn-2')
@@ -17,6 +17,7 @@ const answerButtonfour =document.getElementById('answer-btn-4')
 
 let shuffledQuestions
 let currentQuestionIndex
+
 
 
 
@@ -41,7 +42,7 @@ function playQuiz() {
     getQuestion();
     score.innerText=0;
     incorrect.innerText=0;
-    StartTimer ();
+    countDowntimer () 
 }
 
 // Get Question and show question concept from tutorial https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -146,9 +147,16 @@ function updateIncorrectScore () {
 
 
  //countdown timer
- function StartTimer () {
-    let time=60;
+ function countDowntimer () {
+    let currentTime=50;
+        currentTime--;
+        timerContainer.textContent=currentTime;
 
+        if (currentTime ===0) {
+           clearInterval(timer)
+        }
+        
+        let timer =setInterval(countDowntimer,1000)
  }
 
 

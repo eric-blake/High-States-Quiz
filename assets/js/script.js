@@ -175,7 +175,7 @@ function updateIncorrectScore () {
  function gameOver () {
     questionContainer.classList.add('hide')
     gameOverModal.classList.remove('hide')
-    finalScore.innerHTML = `Your final score is ${score.innerText}`;
+    finalScore.innerHTML = `Your final score is ${score.innerText/4 *100 }% `;
     // playButton.innerText = 'Play again'
     // playAgain.innerText=playButton.innerText
     // playButton.classList.remove('hide')

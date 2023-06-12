@@ -15,9 +15,11 @@ const answerButtoneTwo=document.getElementById('answer-btn-2')
 const answerButtonThree =document.getElementById('answer-btn-3')
 const answerButtonfour =document.getElementById('answer-btn-4')
 const gameOverModal =document.getElementById('gameover-modal-container')
+const finalScore =document.getElementById('final-score')
 
 let shuffledQuestions
 let currentQuestionIndex
+
 
 
 
@@ -161,15 +163,17 @@ function updateIncorrectScore () {
             else if (currentTime === -1) {
                 clearInterval(quizTimer)
                 questionContainer.classList.add('hide')
-                gameOverModal.classList.remove('hide')
-
-   
+                gameOver () 
             }
         },
             1000);
         }
           
- 
+ function gameOver () {
+    gameOverModal.classList.remove('hide')
+    finalScore.innerHTML = `Your final score is ${score.innerText}`;
+
+ }
 
 
 

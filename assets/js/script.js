@@ -107,8 +107,9 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
         nextButton.classList.remove('hide')
     } else {
-        playButton.innerText = 'Play again'
-        playButton.classList.remove('hide')
+        gameOver ()
+        // playButton.innerText = 'Play again'
+        // playButton.classList.remove('hide')
         
     }
     
@@ -168,8 +169,10 @@ function updateIncorrectScore () {
         },
             1000);
         }
-          
+ 
+        
  function gameOver () {
+    questionContainer.classList.add('hide')
     gameOverModal.classList.remove('hide')
     finalScore.innerHTML = `Your final score is ${score.innerText}`;
 

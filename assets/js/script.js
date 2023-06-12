@@ -9,13 +9,14 @@ const scoreBoardContainer = document.getElementById('scoreboard-container')
 const score = document.getElementById('score')
 const incorrectScore = document.getElementById('incorrect')
 const timerContainer =document.getElementById('timer')
-
 const answerButtoneOne =document.getElementById('answer-btn-1')
 const answerButtoneTwo=document.getElementById('answer-btn-2')
 const answerButtonThree =document.getElementById('answer-btn-3')
 const answerButtonfour =document.getElementById('answer-btn-4')
 const gameOverModal =document.getElementById('gameover-modal-container')
 const finalScore =document.getElementById('final-score')
+
+const playAgainButton =document.getElementById('play-again-btn')
 
 let shuffledQuestions
 let currentQuestionIndex
@@ -26,6 +27,7 @@ let currentQuestionIndex
 
 
 playButton.addEventListener('click', playQuiz)
+playAgainButton.addEventListener('click',playQuiz)
 
 nextButton.addEventListener('click' ,() => {
     currentQuestionIndex++;
@@ -36,6 +38,7 @@ nextButton.addEventListener('click' ,() => {
  * Play quiz function starts the quiz after the play button is pressed. It removes the play button and add the questions and answer section
  */
 function playQuiz() {
+    gameOverModal.classList.add('hide')
     playButton.classList.add('hide')
     welcomeContainer.classList.add('hide')
     questionContainer.classList.remove('hide')
@@ -108,8 +111,6 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide')
     } else {
         gameOver ()
-        // playButton.innerText = 'Play again'
-        // playButton.classList.remove('hide')
         
     }
     
@@ -175,7 +176,10 @@ function updateIncorrectScore () {
     questionContainer.classList.add('hide')
     gameOverModal.classList.remove('hide')
     finalScore.innerHTML = `Your final score is ${score.innerText}`;
-
+    // playButton.innerText = 'Play again'
+    // playAgain.innerText=playButton.innerText
+    // playButton.classList.remove('hide')
+    playAgainButton.classList.remove('hide')
  }
 
 

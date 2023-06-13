@@ -111,7 +111,7 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide')
     } else {
         gameOver ()
-        
+        timerContainer.classList.add('hide')
     }
     
    
@@ -155,7 +155,7 @@ function updateIncorrectScore () {
  //countdown timer
  // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
  function countDowntimer () {
-        let currentTime=5;
+        let currentTime=20;
         quizTimer =setInterval( function () {
             currentTime--;
 

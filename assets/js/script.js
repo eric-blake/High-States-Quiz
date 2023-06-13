@@ -113,7 +113,8 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
         nextButton.classList.remove('hide')
     } else {
-        gameOver ()
+      
+        setTimeout(gameOver, 3000); // add timeout to allow last slecetde answer to be seen before calling modal
         timerContainer.classList.add('hide')
     }
     
@@ -125,12 +126,13 @@ function selectAnswer(e) {
 function setAnswerStatus (element, correct) {
     clearAnswerStatus (element)
     if (correct) {
+        element.classList.add('blink')
         element.classList.remove('selected')
         element.classList.add('correct')
-        element.classList.add('blink')
+        
     }
     else {
-       
+       // correct.classList.add('blink')
         //not needed as slecetded button is set to wrong as default, and changed to correct if it is correct
    
  }
@@ -177,7 +179,9 @@ function updateIncorrectScore () {
             1000);
         }
  
+    
         
+    
  function gameOver () {
     questionContainer.classList.add('hide')
     gameOverModal.classList.remove('hide')

@@ -94,21 +94,21 @@ function resetQuestionContainer  () {
 
 function selectAnswer(e) {
     const selectedButton = e.target //get the button we clicked on
+    selectedButton.classList.add('selected')
     const correct = selectedButton.dataset.correct;
 
     if (correct) {
         incrementScore ()
+        
     }
-
     else {
         updateIncorrectScore ()
+    
     }
-
     //set the status for all four buttons
     Array.from(answerButtonsElement.children).forEach(button => {
         setAnswerStatus(button,button.dataset.correct)
-        button.disabled=true;
-       
+        button.disabled=true; // diables answer button to prevent user from incremeting the score by keeping slecting the correct answer    
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
         nextButton.classList.remove('hide')
@@ -125,11 +125,13 @@ function selectAnswer(e) {
 function setAnswerStatus (element, correct) {
     clearAnswerStatus (element)
     if (correct) {
+        element.classList.remove('selected')
         element.classList.add('correct')
-        //element.classList.add('blink')
+        element.classList.add('blink')
     }
     else {
-    element.classList.add('wrong')
+       
+        //not needed as slecetded button is set to wrong as default, and changed to correct if it is correct
    
  }
     }

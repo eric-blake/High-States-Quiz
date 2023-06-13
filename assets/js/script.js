@@ -79,7 +79,9 @@ function showQuestion(query) {
     
      }
     
-
+/*
+Removes bnext betton until answer is selected
+*/
 function resetQuestionContainer  () {
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {   //Loop through all the children for answer button elements and remove first child
@@ -105,6 +107,7 @@ function selectAnswer(e) {
     //set the status for all four buttons
     Array.from(answerButtonsElement.children).forEach(button => {
         setAnswerStatus(button,button.dataset.correct)
+        button.disabled=true;
        
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
@@ -155,6 +158,7 @@ function updateIncorrectScore () {
  //countdown timer
  // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
  function countDowntimer () {
+        timerContainer.classList.remove('hide')
         let currentTime=20;
         quizTimer =setInterval( function () {
             currentTime--;

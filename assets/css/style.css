@@ -10,6 +10,8 @@
 body {
     font-family: merriweather;
     font-weight: 300;
+    /* background-image: linear-gradient(to right, rgba(1, 1, 122, .9), rgba(255, 0, 0, 0.404)); */
+    background-color: #cfd4d8 
 }
 
 /* Logo */
@@ -61,7 +63,7 @@ body {
     margin: 0 auto;
     border-radius: 10px;
     color: white;
-    background-color: black;
+    background-color: blue;
     border: solid 3px;
    border-color: blue;
    width:580px;
@@ -75,14 +77,20 @@ body {
     grid-template-columns: 300px 300px;
     grid-template-rows: 100px 100px;
     border-width: 3px;
+    
   
+}
+
+.answer-btn:hover {
+    border-color:orange;
+    border-width: 5px;
 }
 
 .answer-btn {
     margin: 10px;
     border-radius: 10px;
     color: white;
-    background-color: black;
+    background-color: blue;
     border: solid 3px;
    border-color: blue;
   

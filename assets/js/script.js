@@ -96,6 +96,7 @@ function selectAnswer(e) {
     const selectedButton = e.target //get the button we clicked on
     selectedButton.classList.add('selected')
     const correct = selectedButton.dataset.correct;
+    
 
     if (correct) {
         incrementScore ()

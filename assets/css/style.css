@@ -58,6 +58,14 @@ body {
 #question {
     text-align: center;
     padding: 30px 0;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    border: solid 3px;
+   border-color: blue;
+   width:580px;
+   justify-content: center;
 }
 
 /* Answers */

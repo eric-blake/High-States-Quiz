@@ -163,7 +163,7 @@ function updateIncorrectScore () {
  // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
  function countDowntimer () {
         timerContainer.classList.remove('hide')
-        let currentTime=20;
+        let currentTime=2000;
         quizTimer =setInterval( function () {
             currentTime--;
 

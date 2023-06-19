@@ -133,7 +133,7 @@ function setAnswerStatus (element, correct) {
         
     }
     else {
-       // correct.classList.add('blink')
+        //element.classList.add('blink')
         //not needed as slecetded button is set to wrong as default, and changed to correct if it is correct
    
  }

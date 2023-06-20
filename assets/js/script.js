@@ -17,8 +17,7 @@ const gameOverModal =document.getElementById('gameover-modal-container')
 const finalScore =document.getElementById('final-score')
 
 //Username input field
-const userName = document.getElementById('username')
-let userNameText =document.getElementById('username').value
+let userName = document.getElementById('username')
 
 const playAgainButton =document.getElementById('play-again-btn')
 
@@ -26,7 +25,7 @@ let shuffledQuestions
 let currentQuestionIndex
 
 
-playButton.addEventListener('click', playQuiz)
+playButton.addEventListener('click', checkUsername)
 playAgainButton.addEventListener('click',playQuiz)
 
 nextButton.addEventListener('click' ,() => {
@@ -35,22 +34,28 @@ nextButton.addEventListener('click' ,() => {
 })
 
 
+
 function checkUsername () {
-if (userNameText.length >2) {
+    userName = document.getElementById('username').value.trim();  
+if (userName.length >=2) {
     playQuiz();
 }
 else {
-    alert('Please enter username')
+    alert('Please enter username');
 }
 
 }
+
+
+
+
+
 
 
 /**
  * Play quiz function starts the quiz after the play button is pressed. It removes the play button and add the questions and answer section
  */
 function playQuiz() {
-    checkUsername () 
     gameOverModal.classList.add('hide')
     welcomeContainer.style.display = "none";
     //welcomeContainer.classList.add('hide')

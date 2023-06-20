@@ -37,7 +37,7 @@ nextButton.addEventListener('click' ,() => {
 
 function checkUsername () {
     userName = document.getElementById('username').value.trim();  
-if (userName.length >=2) {
+if (userName.length >2) {
     playQuiz();
 }
 else {
@@ -68,6 +68,7 @@ function playQuiz() {
     score.innerText=0;
     incorrect.innerText=0;
     countDowntimer ()
+    console.log(userName)
 }
 
 // Get Question and show question concept from tutorial https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -182,7 +183,7 @@ function updateIncorrectScore () {
  // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
  function countDowntimer () {
         timerContainer.classList.remove('hide')
-        let currentTime=2000;
+        let currentTime=20;
         quizTimer =setInterval( function () {
             currentTime--;
 
@@ -204,7 +205,7 @@ function updateIncorrectScore () {
  function gameOver () {
     questionContainer.classList.add('hide')
     gameOverModal.classList.remove('hide')
-    finalScore.innerHTML = `Your final score is ${score.innerText/4 *100 }% `;
+    finalScore.innerHTML = `Well done ${userName} Your final score is ${score.innerText/4 *100 }% `;
     // playButton.innerText = 'Play again'
     // playAgain.innerText=playButton.innerText
     // playButton.classList.remove('hide')

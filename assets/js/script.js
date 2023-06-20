@@ -125,10 +125,9 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide')
     } else {
       
-        setTimeout(gameOver, 2000); // add timeout to allow the final answer selected to be seen before calling modal
+        setTimeout(gameOver, 1000); // add timeout to allow the final answer selected to be seen before calling modal
         timerContainer.classList.add('hide')
-    }
-    
+    }    
    
     }
 
@@ -196,9 +195,23 @@ function updateIncorrectScore () {
  function gameOver () {
     questionContainer.classList.add('hide')
     gameOverModal.classList.remove('hide')
-    finalScore.innerHTML = `Well done ${userName} Your final score is ${score.innerText/4 *100 }% `;
+    finalScoreMessage ()
+    
     playAgainButton.classList.remove('hide')
+    console.log(finalScore.innerHTML)
  }
+
+function finalScoreMessage () {
+if (score.innerHTML < 3) {
+    finalScore.innerHTML = `Hard luck ${userName} Your final score is ${score.innerText/4 *100 }% Please try again`;
+}
+else if (score.innerHTML >= 3) {
+    finalScore.innerHTML = `Well done ${userName} Your final score is ${score.innerText/4 *100 }% `;
+}
+else {
+    alert("unknow score")
+}
+}
 
 
 

@@ -47,6 +47,12 @@ body {
     margin:auto;
 }
 
+#username-container {
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+    }
+
 /* buttons */
 #play {
     text-align: center;

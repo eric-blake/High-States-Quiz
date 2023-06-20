@@ -34,7 +34,7 @@ nextButton.addEventListener('click' ,() => {
 })
 
 
-
+/**Checks that username entered is valid*/
 function checkUsername () {
     userName = document.getElementById('username').value.trim();  
 if (userName.length >2) {
@@ -47,18 +47,12 @@ else {
 }
 
 
-
-
-
-
-
 /**
  * Play quiz function starts the quiz after the play button is pressed. It removes the play button and add the questions and answer section
  */
 function playQuiz() {
     gameOverModal.classList.add('hide')
     welcomeContainer.style.display = "none";
-    //welcomeContainer.classList.add('hide')
     questionContainer.classList.remove('hide')
     scoreBoardContainer.classList.remove('hide-scoreboard')
    //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
@@ -79,11 +73,11 @@ function getQuestion() {
     
 }
 
-function showQuestion(query) {
-    questionElement.innerText=query.query //renamed question to query to make easier to read
+function showQuestion(quest) {
+    questionElement.innerText=quest.quest //renamed question to quest to make easier to read
     
     //loop through the question answers, get single answer and create a button for each
-    query.answers.forEach(answer => {
+    quest.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText=answer.text;
         button.classList.add('answer-btn','btn');
@@ -116,14 +110,11 @@ function selectAnswer(e) {
     selectedButton.classList.add('selected')
     const correct = selectedButton.dataset.correct;
     
-
     if (correct) {
-        incrementScore ()
-        
+        incrementScore ()   
     }
     else {
         updateIncorrectScore ()
-    
     }
     //set the status for all four buttons
     Array.from(answerButtonsElement.children).forEach(button => {
@@ -134,7 +125,7 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide')
     } else {
       
-        setTimeout(gameOver, 3000); // add timeout to allow last slecetde answer to be seen before calling modal
+        setTimeout(gameOver, 2000); // add timeout to allow the final answer selected to be seen before calling modal
         timerContainer.classList.add('hide')
     }
     
@@ -206,9 +197,6 @@ function updateIncorrectScore () {
     questionContainer.classList.add('hide')
     gameOverModal.classList.remove('hide')
     finalScore.innerHTML = `Well done ${userName} Your final score is ${score.innerText/4 *100 }% `;
-    // playButton.innerText = 'Play again'
-    // playAgain.innerText=playButton.innerText
-    // playButton.classList.remove('hide')
     playAgainButton.classList.remove('hide')
  }
 
@@ -218,7 +206,7 @@ function updateIncorrectScore () {
 
 const questions = [{
 
-    query: "What state is know as The golden State",
+    quest: "What state is know as The golden State",
     answers: [{
         text: "California",
         correct: true
@@ -240,7 +228,7 @@ const questions = [{
 },
 
 {
-    query: 'What state is know as "The Grand Canyon State"',
+    quest: 'What state is know as "The Grand Canyon State"',
     answers: [{
         text: "Arizona ",
         correct: true
@@ -262,7 +250,7 @@ const questions = [{
 },
 
 {
-    query: 'What state is know as "The Last Frontier state"',
+    quest: 'What state is know as "The Last Frontier state"',
     answers: [{
         text: "Alaska",
         correct: true
@@ -284,7 +272,7 @@ const questions = [{
 },
 
 {
-    query: 'What state is know as "The Empire State"',
+    quest: 'What state is know as "The Empire State"',
     answers: [{
         text: "New York",
         correct: true

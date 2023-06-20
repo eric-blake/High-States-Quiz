@@ -9,10 +9,11 @@
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
+  
 
 }
 body {
-    font-family: merriweather;
+    font-family: karla;
     font-weight: 300;
     /* background-image: linear-gradient(to right, rgba(1, 1, 122, .9), rgba(255, 0, 0, 0.404)); */
     background-color: #cfd4d8 
@@ -55,11 +56,26 @@ body {
     display:flex;
     flex-direction: column;
     gap:15px;
+    border: 1px solid;
+    padding:15px;
     }
 
+    #enter-name {
+        font-size: 2rem;
+    }
+
+    #username {
+        height:3vh
+    }
+
+
 /* buttons */
+#play-btn {
+    font-size: 2rem;
+}
 #play {
     text-align: center;
+   
 }
 
 .btn {
@@ -71,6 +87,9 @@ body {
 #next {
     text-align: center;
 }
+
+
+
 
 
 /* Main quiz section */
@@ -160,6 +179,12 @@ Correct and incorrect answers */
 
   /* game over modal */
 
+
+  #gameover-modal-container {
+    box-sizing: border-box;
+      Margin: 0 auto
+      }
+
   #modal {
     display: flex;
     flex-direction: column;
@@ -170,9 +195,4 @@ Correct and incorrect answers */
     max-width:600px;
     margin:auto;
   
-  }
-
-  #gameover-modal-container {
-box-sizing: border-box;
-  Margin: 0 auto
   }

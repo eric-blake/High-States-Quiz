@@ -16,14 +16,14 @@ const answerButtonfour =document.getElementById('answer-btn-4')
 const gameOverModal =document.getElementById('gameover-modal-container')
 const finalScore =document.getElementById('final-score')
 
+//Username input field
+const userName = document.getElementById('username')
+let userNameText =document.getElementById('username').value
+
 const playAgainButton =document.getElementById('play-again-btn')
 
 let shuffledQuestions
 let currentQuestionIndex
-
-
-
-
 
 
 playButton.addEventListener('click', playQuiz)
@@ -34,13 +34,26 @@ nextButton.addEventListener('click' ,() => {
     getQuestion();
 })
 
+
+function checkUsername () {
+if (userNameText.length >2) {
+    playQuiz();
+}
+else {
+    alert('Please enter username')
+}
+
+}
+
+
 /**
  * Play quiz function starts the quiz after the play button is pressed. It removes the play button and add the questions and answer section
  */
 function playQuiz() {
+    checkUsername () 
     gameOverModal.classList.add('hide')
-    playButton.classList.add('hide')
-    welcomeContainer.classList.add('hide')
+    welcomeContainer.style.display = "none";
+    //welcomeContainer.classList.add('hide')
     questionContainer.classList.remove('hide')
     scoreBoardContainer.classList.remove('hide-scoreboard')
    //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
@@ -164,7 +177,7 @@ function updateIncorrectScore () {
  // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
  function countDowntimer () {
         timerContainer.classList.remove('hide')
-        let currentTime=20;
+        let currentTime=2000;
         quizTimer =setInterval( function () {
             currentTime--;
 

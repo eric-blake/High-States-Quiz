@@ -16,8 +16,10 @@
     </a>
 </header>
 
+
+
 <!-- Main image and welcome message-->
-<div id ="welcome-container">
+<section id ="welcome-container">
 
     <div id="quiz-image">
      <img src="assets/images/US-flag.jpg" alt="Flag of united States of America"> 
@@ -28,7 +30,23 @@
       <p> How well do you know the US states? </p>
       <p>Click play and answer as many questions as you can in 60 seconds</p> 
     </div>
-    </div>
+   
+
+
+<!-- username form -->
+<div id="username-container">
+    <label id ="name" for="username" aria-label="enter your username">Enter your username </label>
+    <input type ="text" id="username" name="username">
+</div>
+
+<!-- Play button -->
+<div id="play">
+<button class="btn" id="play-btn">Play</button>
+</div>
+
+</section>
+
+
 
 <!-- Scoreboard and timer -->
  
@@ -42,10 +60,6 @@
       </div>
     </div>
 
-<!-- Play button -->
-<div id="play">
-    <button class="btn" id="play-btn">Play</button>
-</div>
 
  <!-- Question and answers-->
  
@@ -74,6 +88,8 @@
         <button class="btn hide" id="play-again-btn">Play again</button>
       </div>
     </div>
+
+
 
 <!-- Javascript script -->
 <script defer src="assets/js/script.js"></script>

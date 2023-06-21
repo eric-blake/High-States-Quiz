@@ -69,13 +69,13 @@ function playQuiz() {
 }
 
 // Get Question and show question concept from tutorial https://www.youtube.com/watch?v=riDzcEQbX6k
-
+/**Gets question from list of questions */
 function getQuestion() {
     resetQuestionContainer()
     showQuestion(shuffledQuestions[currentQuestionIndex]);
     
 }
-
+/**Shows question in question container*/
 function showQuestion(quest) {
     questionElement.innerText=quest.quest //renamed question to quest to make easier to read
     
@@ -96,18 +96,17 @@ function showQuestion(quest) {
      }
     
 /*
-Removes bnext betton until answer is selected
+Removes next betton until answer is selected
 */
 function resetQuestionContainer  () {
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {   //Loop through all the children for answer button elements and remove first child
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
- 
 
-  
 }
 
+/**Selects answer question in question container*/
 function selectAnswer(e) {
     const selectedButton = e.target //get the button we clicked on
     selectedButton.classList.add('selected')
@@ -176,7 +175,7 @@ function updateIncorrectScore () {
  // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
  function countDowntimer () {
        // timerContainer.classList.remove('hide')
-        let currentTime=200;
+        let currentTime=100;
         quizTimer =setInterval( function () {
             currentTime--;
 
@@ -204,13 +203,13 @@ function updateIncorrectScore () {
  }
 
 function finalScoreMessage () {
-if (score.innerHTML < 3) {
+if (score.innerHTML < 8) {
     finalScoreName.innerHTML = `Hard luck ${userName}` 
-    finalScore.innerHTML = `Your final score is ${score.innerText/4 *100 }%`;
+    finalScore.innerHTML = `Your final score is ${score.innerText/20 *100 }%`;
 }
-else if (score.innerHTML >= 3) {
+else if (score.innerHTML >= 8) {
     finalScoreName.innerHTML = `Congratulations ${userName}`;
-    finalScore.innerHTML = `Your final score is ${score.innerText/4 *100 }% `;
+    finalScore.innerHTML = `Your final score is ${score.innerText/20 *100 }% `;
 }
 else {
     alert("unknow score")

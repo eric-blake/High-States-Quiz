@@ -15,7 +15,6 @@
 body {
     font-family: karla;
     font-weight: 300;
-    /* background-image: linear-gradient(to right, rgba(1, 1, 122, .9), rgba(255, 0, 0, 0.404)); */
     background-color: #cfd4d8 
 }
 
@@ -73,16 +72,16 @@ body {
     box-shadow: inset 0 0 15px;
     }
 
-    #enter-name {
-        font-size: 150%;
-       text-align: center;
+#enter-name {
+    font-size: 150%;
+     text-align: center;
     }
 
-    #username {
-        height:3vh;
-        border-radius:10px;
-        font-size: 16px;
-        padding-left: 10px;
+#username {
+    height:3vh;
+    border-radius:10px;
+    font-size: 16px;
+    padding-left: 10px;
     }
 
 
@@ -288,3 +287,23 @@ Correct and incorrect answers */
   #modal >h2 {
     font-size: 1.75rem;
   }
+
+
+  /* media queries for screens 650px and down */
+
+  @media screen and (max-width:650px) {
+
+   #quiz-image img  {
+    width:85vw;
+  } 
+
+  #username-container {
+    width:75vw;
+    padding:15px;
+    
+  }
+
+  #welcome-message {
+    width: 85vw;
+  }
+}

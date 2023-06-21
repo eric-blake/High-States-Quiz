@@ -205,11 +205,11 @@ function updateIncorrectScore () {
 
 function finalScoreMessage () {
 if (score.innerHTML < 3) {
-    finalScoreName.innerHTML = `Congratulations ${userName}` 
+    finalScoreName.innerHTML = `Hard luck ${userName}` 
     finalScore.innerHTML = `Your final score is ${score.innerText/4 *100 }`;
 }
 else if (score.innerHTML >= 3) {
-    finalScoreName.innerHTML = `Hard luck ${userName}`;
+    finalScoreName.innerHTML = `Congratulations ${userName}`;
     finalScore.innerHTML = `Your final score is ${score.innerText/4 *100 }% `;
 }
 else {

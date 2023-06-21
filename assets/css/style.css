@@ -204,6 +204,10 @@ Correct and incorrect answers */
     padding:30px;
   }
 
+  .scores {
+    font-size: 120%;
+  }
+
   #score {
     color:green;
     font-size: 120%;
@@ -257,4 +261,6 @@ Correct and incorrect answers */
     max-width:600px;
     margin:auto;
   
+  }#modal >p{
+    font-size: 120%;
   }

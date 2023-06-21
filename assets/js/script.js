@@ -16,6 +16,7 @@ const answerButtonThree =document.getElementById('answer-btn-3')
 const answerButtonfour =document.getElementById('answer-btn-4')
 const gameOverModal =document.getElementById('gameover-modal-container')
 const finalScore =document.getElementById('final-score')
+const finalScoreName =document.getElementById('final-score-name')
 
 //Username input field
 let userName = document.getElementById('username')
@@ -200,15 +201,16 @@ function updateIncorrectScore () {
     finalScoreMessage ()
     
     playAgainButton.classList.remove('hide')
-    console.log(finalScore.innerHTML)
  }
 
 function finalScoreMessage () {
 if (score.innerHTML < 3) {
-    finalScore.innerHTML = `Hard luck ${userName} Your final score is ${score.innerText/4 *100 }% Please try again`;
+    finalScoreName.innerHTML = `Congratulations ${userName}` 
+    finalScore.innerHTML = `Your final score is ${score.innerText/4 *100 }`;
 }
 else if (score.innerHTML >= 3) {
-    finalScore.innerHTML = `Well done ${userName} Your final score is ${score.innerText/4 *100 }% `;
+    finalScoreName.innerHTML = `Hard luck ${userName}`;
+    finalScore.innerHTML = `Your final score is ${score.innerText/4 *100 }% `;
 }
 else {
     alert("unknow score")

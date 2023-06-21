@@ -94,7 +94,7 @@ body {
     border-color: blue;
 }
 
-#play-btn:hover {
+.play-btn:hover {
     background-color:white;
     color:navy
 }
@@ -166,12 +166,12 @@ Correct and incorrect answers */
 }
 
 .wrong {
-    background-color: red;
+    background-color: #c71110;
 }
 
 
 .selected {
-    background-color: red;
+    background-color:#c71110;
    
 }
 
@@ -204,10 +204,15 @@ Correct and incorrect answers */
     padding:30px;
   }
 
-  .scores {
+  #score {
+    color:green;
     font-size: 120%;
   }
 
+#incorrect {
+    color:#c71110;
+    font-size: 120%;
+}
 
   #timer {
     display:flex;

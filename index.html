@@ -41,7 +41,7 @@
 
 <!-- Play button -->
 <div id="play">
-<button id="play-btn">Play</button>
+<button id="play-btn" class="play-btn">Play</button>
 </div>
 
 </div>
@@ -55,12 +55,16 @@
     <div id="scoreboard" >
              <p class ='scores'>Correct-Answers <span id="score">0</span></p>
              <p class ='scores'>Incorrect-Answers <span id="incorrect">0</span></p>  
-             <div id="timer">20</div>
-    
+           
       </div>
     </div>
 
+    <div id="timer-container" class ="hide-timer">
 
+    <div id="timer">20</div>
+
+   </div>
+   
  <!-- Question and answers-->
  
 <div id="question-container" class="hide">
@@ -85,7 +89,7 @@
       <div id="modal" >
         <h2>Game over</h2>
         <p id="final-score">0</p>
-        <button class="btn hide" id="play-again-btn">Play again</button>
+        <button class="hide play-btn" id="play-again-btn">Play again</button>
       </div>
     </div>
 

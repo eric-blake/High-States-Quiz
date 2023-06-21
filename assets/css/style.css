@@ -66,8 +66,9 @@ body {
     display:flex;
     flex-direction: column;
     gap:15px;
-    border: 1px solid;
-    padding:15px;
+    border: 2px solid;
+    padding:15px 45px;
+    border-radius: 10px;
     }
 
     #enter-name {
@@ -75,12 +76,15 @@ body {
     }
 
     #username {
-        height:3vh
+        height:3vh;
+        border-radius:10px;
+        font-size: 16px;
+        padding-left: 10px;
     }
 
 
 /* buttons */
-#play-btn {
+.play-btn {
     font-size: 150%;
     font-weight:600;
     background-color: navy;
@@ -173,7 +177,7 @@ Correct and incorrect answers */
 
 
 /* hide buttons */
-.hide,.hide-scoreboard  {
+.hide,.hide-scoreboard, .hide-timer {
     display: none
 }
 
@@ -197,15 +201,34 @@ Correct and incorrect answers */
     justify-content:center;
     flex-direction: row;
     gap:20px;
-    padding:20px;
+    padding:30px;
   }
+
+  .scores {
+    font-size: 120%;
+  }
+
+
+#timer {
+    display:flex;
+    justify-content:center;
+    align-content: center;
+    padding-bottom: 15px;
+    border:solid 3px;
+    border-radius: 20%;
+    max-width: fit-content;
+    padding:10px
+   
+}
+
 
   /* game over modal */
 
 
   #gameover-modal-container {
     box-sizing: border-box;
-      Margin: 0 auto
+    Margin: 0 auto
+    
       }
 
   #modal {
@@ -214,6 +237,7 @@ Correct and incorrect answers */
     align-items: center;
     gap:20px;
     border: 1px solid;
+    border-radius: 10px;
     padding:20px;
     max-width:600px;
     margin:auto;

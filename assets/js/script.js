@@ -8,7 +8,7 @@ const nextButton =document.getElementById('next-btn')
 const scoreBoardContainer = document.getElementById('scoreboard-container')
 const score = document.getElementById('score')
 const incorrectScore = document.getElementById('incorrect')
-const timerContainer =document.getElementById('timer')
+const timerContainer =document.getElementById('timer-container')
 const answerButtoneOne =document.getElementById('answer-btn-1')
 const answerButtoneTwo=document.getElementById('answer-btn-2')
 const answerButtonThree =document.getElementById('answer-btn-3')
@@ -55,6 +55,7 @@ function playQuiz() {
     welcomeContainer.style.display = "none";
     questionContainer.classList.remove('hide')
     scoreBoardContainer.classList.remove('hide-scoreboard')
+    timerContainer.classList.remove('hide-timer')
    //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
     shuffledQuestions=questions.sort(() => Math.random() - .5)  // gets a randow question
     currentQuestionIndex = 0  //set to 0 as we are starting on first question
@@ -126,7 +127,7 @@ function selectAnswer(e) {
     } else {
       
         setTimeout(gameOver, 1000); // add timeout to allow the final answer selected to be seen before calling modal
-        timerContainer.classList.add('hide')
+        timerContainer.classList.add('hide-timer')
     }    
    
     }
@@ -172,7 +173,7 @@ function updateIncorrectScore () {
  //countdown timer
  // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
  function countDowntimer () {
-        timerContainer.classList.remove('hide')
+       // timerContainer.classList.remove('hide')
         let currentTime=20;
         quizTimer =setInterval( function () {
             currentTime--;

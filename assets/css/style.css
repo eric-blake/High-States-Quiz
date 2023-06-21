@@ -42,8 +42,18 @@ body {
     width:600px;
     display: block;
     margin:auto;
-    padding:30px 0;
+    padding-top:15px;
 }
+
+#welcome-message h2 {
+    padding:10px
+}
+
+#welcome-message  p {
+   font-size: 120%;
+    padding:10px
+}
+
 
 #quiz-image img  {
     height:auto;
@@ -61,7 +71,7 @@ body {
     }
 
     #enter-name {
-        font-size: 2rem;
+        font-size: 150%;
     }
 
     #username {
@@ -71,8 +81,20 @@ body {
 
 /* buttons */
 #play-btn {
-    font-size: 2rem;
+    font-size: 150%;
+    font-weight:600;
+    background-color: navy;
+    color:white;
+    padding:5px 15px;
+    border-radius: 10px;
+    border-color: blue;
 }
+
+#play-btn:hover {
+    background-color:white;
+    color:navy
+}
+
 #play {
     text-align: center;
    
@@ -101,7 +123,7 @@ body {
     margin: 0 auto;
     border-radius: 10px;
     color: white;
-    background-color: blue;
+    background-color: navy;
     border: solid 3px;
    border-color: blue;
    width:580px;
@@ -128,7 +150,7 @@ body {
     margin: 10px;
     border-radius: 10px;
     color: white;
-    background-color: blue;
+    background-color: navy;
     border: solid 3px;
    border-color: blue;
   
@@ -175,6 +197,7 @@ Correct and incorrect answers */
     justify-content:center;
     flex-direction: row;
     gap:20px;
+    padding:20px;
   }
 
   /* game over modal */

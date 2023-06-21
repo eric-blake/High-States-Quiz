@@ -9,6 +9,7 @@ const scoreBoardContainer = document.getElementById('scoreboard-container')
 const score = document.getElementById('score')
 const incorrectScore = document.getElementById('incorrect')
 const timerContainer =document.getElementById('timer-container')
+const time=document.getElementById('time')
 const answerButtoneOne =document.getElementById('answer-btn-1')
 const answerButtoneTwo=document.getElementById('answer-btn-2')
 const answerButtonThree =document.getElementById('answer-btn-3')
@@ -179,7 +180,7 @@ function updateIncorrectScore () {
             currentTime--;
 
             if (currentTime >= 0) {
-            timerContainer.textContent=currentTime;
+            time.textContent=currentTime;
             }
             else if (currentTime === -1) {
                 clearInterval(quizTimer)

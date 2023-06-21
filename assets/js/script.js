@@ -176,7 +176,7 @@ function updateIncorrectScore () {
  // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
  function countDowntimer () {
        // timerContainer.classList.remove('hide')
-        let currentTime=20;
+        let currentTime=200;
         quizTimer =setInterval( function () {
             currentTime--;
 
@@ -206,7 +206,7 @@ function updateIncorrectScore () {
 function finalScoreMessage () {
 if (score.innerHTML < 3) {
     finalScoreName.innerHTML = `Hard luck ${userName}` 
-    finalScore.innerHTML = `Your final score is ${score.innerText/4 *100 }`;
+    finalScore.innerHTML = `Your final score is ${score.innerText/4 *100 }%`;
 }
 else if (score.innerHTML >= 3) {
     finalScoreName.innerHTML = `Congratulations ${userName}`;

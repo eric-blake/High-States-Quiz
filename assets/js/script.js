@@ -1,32 +1,32 @@
 
+
+//Button variables
 const playButton = document.getElementById('play-btn')
+const nextButton =document.getElementById('next-btn')
+const answerButtonsElement = document.getElementById('answer-buttons')
+const playAgainButton =document.getElementById('play-again-btn')
+//Container variables
 const welcomeContainer = document.getElementById('welcome-container')
 const questionContainer = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
-const nextButton =document.getElementById('next-btn')
+//Scores variables
 const scoreBoardContainer = document.getElementById('scoreboard-container')
 const score = document.getElementById('score')
 const incorrectScore = document.getElementById('incorrect')
-const timerContainer =document.getElementById('timer-container')
-const time=document.getElementById('time')
-const answerButtoneOne =document.getElementById('answer-btn-1')
-const answerButtoneTwo=document.getElementById('answer-btn-2')
-const answerButtonThree =document.getElementById('answer-btn-3')
-const answerButtonfour =document.getElementById('answer-btn-4')
-const gameOverModal =document.getElementById('gameover-modal-container')
 const finalScore =document.getElementById('final-score')
 const finalScoreName =document.getElementById('final-score-name')
-
-//Username input field
+//Timer variables
+const timerContainer =document.getElementById('timer-container')
+const time=document.getElementById('time')
+//Modal variables
+const gameOverModal =document.getElementById('gameover-modal-container')
+//Username input variable
 let userName = document.getElementById('username')
-
-const playAgainButton =document.getElementById('play-again-btn')
-
+//Questions variables
 let shuffledQuestions
 let currentQuestionIndex
 
-
+//Event listeners
 playButton.addEventListener('click', checkUsername)
 playAgainButton.addEventListener('click',playQuiz)
 
@@ -36,10 +36,12 @@ nextButton.addEventListener('click' ,() => {
 })
 
 
+//Functions
+
 /**Checks that username entered is valid*/
 function checkUsername () {
     userName = document.getElementById('username').value.trim();  
-if (userName.length >2) {
+if (userName.length >=2) {
     playQuiz();
 }
 else {
@@ -158,12 +160,13 @@ function clearAnswerStatus (element)  {
 
 
 // Concept from Love Maths project
+/**Increments correct answers in scoreboard*/
 function incrementScore () {
     let oldScore=parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++oldScore;
 
 }
-
+/**Increments incorrect answers in scoreboard*/
 function updateIncorrectScore () {
     let oldScore=parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++oldScore;
@@ -171,8 +174,9 @@ function updateIncorrectScore () {
 
 
 
- //countdown timer
+ 
  // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
+ /**countdown timer*/
  function countDowntimer () {
        // timerContainer.classList.remove('hide')
         let currentTime=100;
@@ -193,15 +197,16 @@ function updateIncorrectScore () {
  
     
         
-    
+  /**Gameover*/   
  function gameOver () {
     questionContainer.classList.add('hide')
     gameOverModal.classList.remove('hide')
     finalScoreMessage ()
-    
     playAgainButton.classList.remove('hide')
  }
 
+
+  /**Gamover modal messages*/
 function finalScoreMessage () {
 if (score.innerHTML < 8) {
     finalScoreName.innerHTML = `Hard luck ${userName}` 

@@ -25,6 +25,7 @@ let userName = document.getElementById('username')
 //Questions variables
 let shuffledQuestions
 let currentQuestionIndex
+let shuffledAnswers
 
 //Event listeners
 playButton.addEventListener('click', checkUsername)
@@ -62,12 +63,13 @@ function playQuiz() {
     timerContainer.classList.remove('hide-timer')
    //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
     shuffledQuestions=questions.sort(() => Math.random() - .5)  // gets a randow question
+    shuffledAnswers=shuffledQuestions[0].answers.sort(() => Math.random() - .5)  // shuffles the answers
     currentQuestionIndex = 0  //set to 0 as we are starting on first question
     getQuestion();
     score.innerText=0;
     incorrect.innerText=0;
     countDowntimer ()
-    console.log(userName)
+    
 }
 
 // Get Question and show question concept from tutorial https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -75,12 +77,13 @@ function playQuiz() {
 function getQuestion() {
     resetQuestionContainer()
     showQuestion(shuffledQuestions[currentQuestionIndex]);
+    console.log(question, currentQuestionIndex);
+   
     
 }
 /**Shows question in question container*/
 function showQuestion(quest) {
     questionElement.innerText=quest.quest //renamed question to quest to make easier to read
-    
     //loop through the question answers, get single answer and create a button for each
     quest.answers.forEach(answer => {
         const button = document.createElement('button');
@@ -315,1034 +318,1034 @@ const questions = [
         ]
     },
 
-    {
+    // {
 
-        quest: '"Which state is know as "The golden State"',
-        answers: [{
-            text: "California",
-            correct: true
-        },
-        {
-            text: "Arizona",
-            correct: false
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Hawaii",
-            correct: false
-        }
+    //     quest: '"Which state is know as "The golden State"',
+    //     answers: [{
+    //         text: "California",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Arizona",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Hawaii",
+    //         correct: false
+    //     }
     
-        ]
-    },
+    //     ]
+    // },
     
 
 
-    {
-        quest: 'Which state is know as "Centennial State"',
-        answers: [{
-            text: "Colorado ",
-            correct: true
-        },
-        {
-            text: "Illinois",
-            correct: false
-        },
-        {
-            text: "North Carolina",
-            correct: false
-        },
-        {
-            text: "Wyoming",
-            correct: false
-        }
+    // {
+    //     quest: 'Which state is know as "Centennial State"',
+    //     answers: [{
+    //         text: "Colorado ",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Illinois",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "North Carolina",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Wyoming",
+    //         correct: false
+    //     }
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "Nutmeg State"',
-        answers: [{
-            text: "Connecticut",
-            correct: true
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Maryland",
-            correct: false
-        },
-        {
-            text: "New Mexico",
-            correct: false
-        }
+    // {
+    //     quest: 'Which state is know as "Nutmeg State"',
+    //     answers: [{
+    //         text: "Connecticut",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Maryland",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "New Mexico",
+    //         correct: false
+    //     }
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The First State"',
-        answers: [{
-            text: "Delaware",
-            correct: true
-        },
-        {
-            text: "Indiana",
-            correct: false
-        },
-        {
-            text: "Maryland",
-            correct: false
-        },
-        {
-            text: "New Mexico",
-            correct: false
-        }
+    // {
+    //     quest: 'Which state is know as "The First State"',
+    //     answers: [{
+    //         text: "Delaware",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Indiana",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Maryland",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "New Mexico",
+    //         correct: false
+    //     }
     
-        ]
-    },
+    //     ]
+    // },
 
 
-    {
-        quest: 'Which state is know as "The Sunshine State"',
-        answers: [{
-            text: "Florida",
-            correct: true
-        },
-        {
-            text: "Indiana",
-            correct: false
-        },
-        {
-            text: "Louisiana",
-            correct: false
-        },
-        {
-            text: "Nebraska",
-            correct: false
-        }
+    // {
+    //     quest: 'Which state is know as "The Sunshine State"',
+    //     answers: [{
+    //         text: "Florida",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Indiana",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Louisiana",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Nebraska",
+    //         correct: false
+    //     }
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Peach State"',
-        answers: [{
-            text: "Georgia",
-            correct: true
-        },
-        {
-            text: "Kentucky",
-            correct: false
-        },
-        {
-            text: "Montana",
-            correct: false
-        },
-        {
-            text: "Oklahoma",
-            correct: false
-        }
+    // {
+    //     quest: 'Which state is know as "The Peach State"',
+    //     answers: [{
+    //         text: "Georgia",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Kentucky",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Montana",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Oklahoma",
+    //         correct: false
+    //     }
     
-        ]
-    },
+    //     ]
+    // },
 
 
 
-    {
-        quest: 'Which state is know as "The Aloha State"',
-        answers: [{
-            text: "Hawaii",
-            correct: true
-        },
-        {
-            text: "Missouri",
-            correct: false
-        },
-        {
-            text: "Rhode Island",
-            correct: false
-        },
-        {
-            text: "Vermont",
-            correct: false
-        }
+    // {
+    //     quest: 'Which state is know as "The Aloha State"',
+    //     answers: [{
+    //         text: "Hawaii",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Missouri",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Rhode Island",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Vermont",
+    //         correct: false
+    //     }
     
-        ]
-    },
+    //     ]
+    // },
 
 
-    {
-        quest: 'Which state is know as "The Gem State"',
-        answers: [{
-            text: "Idaho",
-            correct: true
-        },
-        {
-            text: "Delaware",
-            correct: false
-        },
-        {
-            text: "Arkansas",
-            correct: false
-        },
-        {
-            text: "Massachusetts",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Gem State"',
+    //     answers: [{
+    //         text: "Idaho",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Delaware",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Arkansas",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Massachusetts",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
 
-    {
-        quest: 'Which state is know as "The Prairie State"',
-        answers: [{
-            text: "Illinois",
-            correct: true
-        },
-        {
-            text: "Kansas",
-            correct: false
-        },
-        {
-            text: "Iowa",
-            correct: false
-        },
-        {
-            text: "Nevada",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Prairie State"',
+    //     answers: [{
+    //         text: "Illinois",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Kansas",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Iowa",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Nevada",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Hoosier State"',
-        answers: [{
-            text: "Indiana",
-            correct: true
-        },
-        {
-            text: "Minnesota",
-            correct: false
-        },
-        {
-            text: "Arizona",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Hoosier State"',
+    //     answers: [{
+    //         text: "Indiana",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Minnesota",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Arizona",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
 
-    {
-        quest: 'Which state is know as "The Hawkeye State"',
-        answers: [{
-            text: "Iowa",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Hawkeye State"',
+    //     answers: [{
+    //         text: "Iowa",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
 
-    {
-        quest: 'Which state is know as "The Sunflower State"',
-        answers: [{
-            text: "Kansas",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Sunflower State"',
+    //     answers: [{
+    //         text: "Kansas",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
 
 
-    {
-        quest: 'Which state is know as "The Bluegrass State"',
-        answers: [{
-            text: "Kentucky",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Bluegrass State"',
+    //     answers: [{
+    //         text: "Kentucky",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
 
-    {
-        quest: 'Which state is know as "The Pelican State"',
-        answers: [{
-            text: "Louisiana",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Pelican State"',
+    //     answers: [{
+    //         text: "Louisiana",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Pine Tree State"',
-        answers: [{
-            text: "Maine",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Pine Tree State"',
+    //     answers: [{
+    //         text: "Maine",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Free State"',
-        answers: [{
-            text: "Maryland",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Free State"',
+    //     answers: [{
+    //         text: "Maryland",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Bay State"',
-        answers: [{
-            text: "Massachusetts",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Bay State"',
+    //     answers: [{
+    //         text: "Massachusetts",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Wolverine State"',
-        answers: [{
-            text: "Michigan",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Wolverine State"',
+    //     answers: [{
+    //         text: "Michigan",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The North Star State"',
-        answers: [{
-            text: "Minnesota",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The North Star State"',
+    //     answers: [{
+    //         text: "Minnesota",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Magnolia State"',
-        answers: [{
-            text: "Mississippi",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Magnolia State"',
+    //     answers: [{
+    //         text: "Mississippi",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Show Me State"',
-        answers: [{
-            text: "Missouri",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Show Me State"',
+    //     answers: [{
+    //         text: "Missouri",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
 
-    {
-        quest: 'Which state is know as "The Treasure State"',
-        answers: [{
-            text: "Montana",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Treasure State"',
+    //     answers: [{
+    //         text: "Montana",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
 
-    {
-        quest: 'Which state is know as "The Cornhusker State"',
-        answers: [{
-            text: "Nebraska",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Cornhusker State"',
+    //     answers: [{
+    //         text: "Nebraska",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Silver State"',
-        answers: [{
-            text: "Nevada",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Silver State"',
+    //     answers: [{
+    //         text: "Nevada",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Granite State"',
-        answers: [{
-            text: "New Hampshire",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Granite State"',
+    //     answers: [{
+    //         text: "New Hampshire",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Garden State"',
-        answers: [{
-            text: "New Jersey",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Garden State"',
+    //     answers: [{
+    //         text: "New Jersey",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "Land of Enchantment"',
-        answers: [{
-            text: "New Mexico",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "Land of Enchantment"',
+    //     answers: [{
+    //         text: "New Mexico",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Empire State"',
-        answers: [{
-            text: "New York",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Empire State"',
+    //     answers: [{
+    //         text: "New York",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Tar Heel State"',
-        answers: [{
-            text: "North Carolina",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Tar Heel State"',
+    //     answers: [{
+    //         text: "North Carolina",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Flickertail State"',
-        answers: [{
-            text: "North Dakota",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Flickertail State"',
+    //     answers: [{
+    //         text: "North Dakota",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Buckeye State"',
-        answers: [{
-            text: "Ohio",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Buckeye State"',
+    //     answers: [{
+    //         text: "Ohio",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Sooner State"',
-        answers: [{
-            text: "Oklahoma",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Sooner State"',
+    //     answers: [{
+    //         text: "Oklahoma",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Beaver State"',
-        answers: [{
-            text: "Oregon",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Beaver State"',
+    //     answers: [{
+    //         text: "Oregon",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Keystone State"',
-        answers: [{
-            text: "Pennsylvania",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Keystone State"',
+    //     answers: [{
+    //         text: "Pennsylvania",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Ocean State"',
-        answers: [{
-            text: "Rhode Island",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Ocean State"',
+    //     answers: [{
+    //         text: "Rhode Island",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Palmetto State"',
-        answers: [{
-            text: "South Carolina",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Palmetto State"',
+    //     answers: [{
+    //         text: "South Carolina",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The The Mount Rushmore State"',
-        answers: [{
-            text: "South Dakota",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The The Mount Rushmore State"',
+    //     answers: [{
+    //         text: "South Dakota",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Volunteer State"',
-        answers: [{
-            text: "Tennessee",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Volunteer State"',
+    //     answers: [{
+    //         text: "Tennessee",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Lone Star State"',
-        answers: [{
-            text: "Texas",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Lone Star State"',
+    //     answers: [{
+    //         text: "Texas",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
 
-    {
-        quest: 'Which state is know as "The Beehive State"',
-        answers: [{
-            text: "Utah",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Beehive State"',
+    //     answers: [{
+    //         text: "Utah",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
 
-    {
-        quest: 'Which state is know as "The Green Mountain State"',
-        answers: [{
-            text: "Vermont",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Green Mountain State"',
+    //     answers: [{
+    //         text: "Vermont",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The The Old Dominion State"',
-        answers: [{
-            text: "Virginia",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The The Old Dominion State"',
+    //     answers: [{
+    //         text: "Virginia",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Evergreen State"',
-        answers: [{
-            text: "Washington",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Evergreen State"',
+    //     answers: [{
+    //         text: "Washington",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Mountain State"',
-        answers: [{
-            text: "West Virginia",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Mountain State"',
+    //     answers: [{
+    //         text: "West Virginia",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Badger State"',
-        answers: [{
-            text: "Wisconsin",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Badger State"',
+    //     answers: [{
+    //         text: "Wisconsin",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        quest: 'Which state is know as "The Equality State"',
-        answers: [{
-            text: "Wyoming",
-            correct: true
-        },
-        {
-            text: "Florida",
-            correct: false
-        },
-        {
-            text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
-            correct: false
-        },
+    // {
+    //     quest: 'Which state is know as "The Equality State"',
+    //     answers: [{
+    //         text: "Wyoming",
+    //         correct: true
+    //     },
+    //     {
+    //         text: "Florida",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Colorado",
+    //         correct: false
+    //     },
+    //     {
+    //         text: "Connecticut",
+    //         correct: false
+    //     },
     
-        ]
-    },
+    //     ]
+    // },
 
 
 

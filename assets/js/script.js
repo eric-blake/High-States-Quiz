@@ -5,10 +5,15 @@ const playButton = document.getElementById('play-btn')
 const nextButton =document.getElementById('next-btn')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const playAgainButton =document.getElementById('play-again-btn')
+const alertButton = document.getElementById('alert-btn')
 //Container variables
 const welcomeContainer = document.getElementById('welcome-container')
 const questionContainer = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
+const usernameAlertContainer=document.getElementById('username-alert-container')
+const usernameContainer =document.getElementById('username-container')
+const welcomeMessage=document.getElementById('welcome-message')
+
 //Scores variables
 const scoreBoardContainer = document.getElementById('scoreboard-container')
 const score = document.getElementById('score')
@@ -30,6 +35,7 @@ let shuffledAnswers
 //Event listeners
 playButton.addEventListener('click', checkUsername)
 playAgainButton.addEventListener('click',playQuiz)
+alertButton.addEventListener('click', checkUsername)
 
 nextButton.addEventListener('click' ,() => {
     currentQuestionIndex++;
@@ -41,14 +47,21 @@ nextButton.addEventListener('click' ,() => {
 
 /**Checks that username entered is valid*/
 function checkUsername () {
+    //usernameContainer.style.display = "flex";
     userName = document.getElementById('username').value.trim();  
 if (userName.length >=2) {
     playQuiz();
 }
 else {
-    alert('Please enter username');
+    usernameAlert()
 }
 
+}
+
+function usernameAlert() {
+    // welcomeMessage.style.display = "none";
+     usernameContainer.style.display = "none";
+    usernameAlertContainer.classList.remove('hide')
 }
 
 

@@ -61,16 +61,32 @@ body {
     margin:auto;
 }
 
-#username-container {
+
+ #username-container {
     display:flex;
     flex-direction: column;
+    width:600px;
+    border: 2px solid;
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px;
+    padding:15px 75px;
+    gap:15px;
+ }
+
+#username-alert-container {
+    display:flex;
+    flex-direction: column;
+    background-color:#002868;
+    color:white;
     width:600px;
     gap:15px;
     border: 2px solid;
     padding:15px 75px;
     border-radius: 10px;
-    box-shadow: inset 0 0 15px;
-    }
+    margin:auto;
+   
+  
+}
 
 #enter-name {
     font-size: 150%;
@@ -132,7 +148,14 @@ body {
    
 }
 
-
+#alert-btn {
+    font-size: 150%;
+    font-weight:600;
+    background-color: white;
+    color:#002868;
+    padding:5px 15px;
+    border-radius: 10px;
+}
 
 
 /* Main quiz section */

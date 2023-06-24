@@ -56,19 +56,19 @@ else {
  * Play quiz function starts the quiz after the play button is pressed. It removes the play button and add the questions and answer section
  */
 function playQuiz() {
-    gameOverModal.classList.add('hide')
+    gameOverModal.classList.add('hide');
     welcomeContainer.style.display = "none";
-    questionContainer.classList.remove('hide')
-    scoreBoardContainer.classList.remove('hide-scoreboard')
-    timerContainer.classList.remove('hide-timer')
+    questionContainer.classList.remove('hide');
+    scoreBoardContainer.classList.remove('hide-scoreboard');
+    timerContainer.classList.remove('hide-timer');
    //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
-    shuffledQuestions=questions.sort(() => Math.random() - .5)  // gets a randow question
+    shuffledQuestions=questions.sort(() => Math.random() - .5) ; // gets a randow question
+    
     currentQuestionIndex = 0  //set to 0 as we are starting on first question
-    shuffledAnswers=answers.sort(() => Math.random() - .5)  // shuffles the answers
     getQuestion();
     score.innerText=0;
     incorrect.innerText=0;
-    countDowntimer ()
+    countDowntimer ();
     
 }
 
@@ -77,9 +77,10 @@ function playQuiz() {
 function getQuestion() {
     resetQuestionContainer()
     showQuestion(shuffledQuestions[currentQuestionIndex]);
+    shuffledAnswers=shuffledQuestions[currentQuestionIndex].answers.sort(() => Math.random() - .5);  // shuffles the answers
     //console.log(question, currentQuestionIndex);
-    console.log(shuffledQuestions)
-   
+    console.log(shuffledQuestions, shuffledAnswers)
+
     
 }
 /**Shows question in question container*/

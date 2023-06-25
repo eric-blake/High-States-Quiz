@@ -73,7 +73,7 @@ body {
     gap:15px;
  }
 
-#username-alert-container {
+#username-alert {
     display:flex;
     flex-direction: column;
     background-color:#002868;

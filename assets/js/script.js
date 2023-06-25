@@ -35,7 +35,7 @@ let shuffledAnswers
 //Event listeners
 playButton.addEventListener('click', checkUsername)
 playAgainButton.addEventListener('click',playQuiz)
-alertButton.addEventListener('click', checkUsername)
+alertButton.addEventListener('click', resetPage)
 
 nextButton.addEventListener('click' ,() => {
     currentQuestionIndex++;
@@ -57,11 +57,16 @@ else {
 }
 
 }
-
+/**Alerts user if no username is entered or username is invalid*/
 function usernameAlert() {
     // welcomeMessage.style.display = "none";
      usernameContainer.style.display = "none";
-    usernameAlertContainer.classList.remove('hide')
+     usernameAlertContainer.classList.remove('hide')
+}
+/**Resets page after username alert message*/
+function resetPage () {
+    usernameAlertContainer.classList.add('hide')
+    usernameContainer.style.display = "flex";
 }
 
 
@@ -69,6 +74,7 @@ function usernameAlert() {
  * Play quiz function starts the quiz after the play button is pressed. It removes the play button and add the questions and answer section
  */
 function playQuiz() {
+    usernameContainer.style.display = "none";
     gameOverModal.classList.add('hide');
     welcomeContainer.style.display = "none";
     questionContainer.classList.remove('hide');

@@ -33,7 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:15px;
+    gap:10px;
 }
 
 #welcome-message {
@@ -71,21 +71,27 @@ body {
     box-shadow: inset 0 0 15px;
     padding:15px 75px;
     gap:15px;
+    margin:auto;
  }
 
 #username-alert {
     display:flex;
     flex-direction: column;
     background-color:#002868;
+    align-items: center;
     color:white;
-    width:600px;
+    width:400px;
+    height:125px;
     gap:15px;
     border: 2px solid;
-    padding:15px 75px;
+    padding:15px;
     border-radius: 10px;
     margin:auto;
    
-  
+}
+
+#username-alert > p{
+    font-size: 150%;
 }
 
 #enter-name {
@@ -155,6 +161,11 @@ body {
     color:#002868;
     padding:5px 15px;
     border-radius: 10px;
+}
+
+#alert-btn:hover {
+    color:white;
+    background-color: #002868
 }
 
 

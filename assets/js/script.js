@@ -59,7 +59,7 @@ else {
 }
 /**Alerts user if no username is entered or username is invalid*/
 function usernameAlert() {
-    // welcomeMessage.style.display = "none";
+     //welcomeMessage.style.display = "none";
      usernameContainer.style.display = "none";
      usernameAlertContainer.classList.remove('hide')
 }

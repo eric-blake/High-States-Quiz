@@ -37,6 +37,13 @@ playButton.addEventListener('click', checkUsername)
 playAgainButton.addEventListener('click',playQuiz)
 alertButton.addEventListener('click', resetPage)
 
+document.getElementById('username').addEventListener('keydown', function(event) {
+    if(event.key ==='Enter') {
+        checkUsername();
+    }
+})
+
+
 nextButton.addEventListener('click' ,() => {
     currentQuestionIndex++;
     getQuestion();

@@ -26,7 +26,7 @@ const time=document.getElementById('time')
 //Modal variables
 const gameOverModal =document.getElementById('gameover-modal-container')
 //Username input variable
-let userName = document.getElementById('username')
+let userName = document.getElementById('username').focus()
 //Questions variables
 let shuffledQuestions
 let currentQuestionIndex

@@ -1,6 +1,6 @@
 # High States Quiz
 
-<img src="asset/" alt="Screenshot from http://ami.responsivedesign.is/ website, that show how the website looks on commons screen sizes">
+<img src="assets/documentation/big-states-quiz-mockup.PNG" alt="Screenshot from http://ami.responsivedesign.is/ website, that show how the website looks on commons screen sizes">
 
 The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many question as possbile in 60 seconds. At the end of the game the user is presented with their score. 
 -By Eric Blake
@@ -27,31 +27,35 @@ The high states game is a quiz based game that tests the users knowledge of the 
 
 ## Features
 
-### The landing page image:
+### The welcome page:
 * The landing page includes a header and photograph to allow the user to see the name of the quiz.
 * This section gives the user the intructions for the quiz
+<img src="assets/documentation/big-states-quiz-welcome.PNG" alt="Screenshot of welcome page">
 
-<img src="assets/documentation/" alt="Screenshot of landing page">
 
-### Questions and answers section:
+### Enter username section:
+* The user must enter thier username before stating the quiz.
+<img src="assets/documentation/big-states-quiz-username.PNG" alt="Screenshot of username entry field">
+
+### Questions and answers box:
 * This section will allow the user to see what events are on over the next few months.
 * This section will be updated as these events change to keep the user up to date.
-<img src="assets/documentation/" alt="Screenshot of landing page">
+<img src="assets/documentation/big-states-quiz-questions-and-answers.PNG" alt="Screenshot of questions and answers box">
 
 ### Scoreboard:
 * The attractions section will provide the user with a description of the attraction and a supporting image to see what the attraction looks like.
 * This section is valuable to the user as they will be able to easily identify attractions of interest to them.
-<img src="assets/documentation/" alt="Screenshot of landing page">
+<img src="assets/documentation/big-states-quiz-scoreboard.PNG" alt="Screenshot of scoreboard">
 
 ### Countdown timer:
 * The countdown timer starts when the user clicks on play quiz. The first question is presented to the user
 * The timer counts down from 60 seconds, and after 60 seconds the Game-over function is called.
-<img src="assets/documentation/" alt="Screenshot of landing page">
+<img src="assets/documentation/big-states-quiz-timer.PNG" alt="Screenshot of countdown timer">
 
 ### The Footer:
 * The footer section includeso the relevant social media sites for the High states game
 * The links will open to a new tab to allow easy navigation for the user.
-<img src="assets/documentation/" alt="Screenshot of landing page">
+<img src="assets/documentation/big-states-quiz-footer.PNG" alt="Screenshot of footer">
 
 ### Features left to implement:
 N/A

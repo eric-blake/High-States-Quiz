@@ -296,6 +296,7 @@ Correct and incorrect answers */
     background-color: white;
     color:#002868;
     font-size: 24px;
+    font-weight:600;
 
 }
 
@@ -323,6 +324,7 @@ Correct and incorrect answers */
   
   }#modal >p{
     font-size: 1.5rem;
+    text-align:center;
   }
 
   #modal >h2 {

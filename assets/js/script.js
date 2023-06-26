@@ -209,7 +209,7 @@ function updateIncorrectScore () {
  /**countdown timer*/
  function countDowntimer () {
        // timerContainer.classList.remove('hide')
-        let currentTime=60;
+        let currentTime=20;
         quizTimer =setInterval( function () {
             currentTime--;
 
@@ -247,7 +247,7 @@ else if (score.innerHTML >= 8) {
     finalScore.innerHTML = `Your final score is ${score.innerText} out of ${parseInt(score.innerText) + parseInt(incorrect.innerText)}`;
 }
 else {
-    alert("unknow score")
+    alert("unknown score")
 }
 }
 

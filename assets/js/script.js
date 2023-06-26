@@ -89,7 +89,6 @@ function playQuiz() {
     timerContainer.classList.remove('hide-timer');
    //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
     shuffledQuestions=questions.sort(() => Math.random() - .5) ; // gets a randow question
-    
     currentQuestionIndex = 0  //set to 0 as we are starting on first question
     getQuestion();
     score.innerText=0;
@@ -103,7 +102,6 @@ function playQuiz() {
 function getQuestion() {
     resetQuestionContainer()
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-    shuffledAnswers=shuffledQuestions[currentQuestionIndex].answers.sort(() => Math.random() - .5);  // shuffles the answers
     //console.log(question, currentQuestionIndex);
     console.log(shuffledQuestions, shuffledAnswers)
 
@@ -112,8 +110,9 @@ function getQuestion() {
 /**Shows question in question container*/
 function showQuestion(quest) {
     questionElement.innerText=quest.quest //renamed question to quest to make easier to read
-    //loop through the question answers, get single answer and create a button for each
-    quest.answers.forEach(answer => {
+    //shuffle the answers and loop through the question answers, get single answer and create a button for each
+    shuffledAnswers=shuffledQuestions[currentQuestionIndex].answers.sort(() => Math.random() - .5);  // shuffles the answers
+    shuffledAnswers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText=answer.text;
         button.classList.add('answer-btn','btn');

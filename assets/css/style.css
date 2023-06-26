@@ -41,7 +41,7 @@ body {
     width:650px;
     display: block;
     margin:auto;
-    padding-top:15px;
+    padding:15px 0;
 }
 
 #welcome-message h2 {
@@ -128,7 +128,7 @@ body {
     font-weight:600;
     background-color: white;
     color:#002868;
-    padding:5px 15px;
+    padding:15px 30px;
     border-radius: 10px;
     border-color: blue;
 }
@@ -289,7 +289,7 @@ Correct and incorrect answers */
     height: 50px;
     padding:10px;
     background-color: white;
-    color:navy;
+    color:#002868;
     font-size: 24px;
 
 }
@@ -325,6 +325,33 @@ Correct and incorrect answers */
     font-size: 1.75rem;
   }
 
+
+  footer {
+    position: fixed;
+    bottom: 0px;
+   }
+  
+
+  .social-media  {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    list-style-type:none;
+    /* position:float-right;
+    bottom:0; */
+
+  }
+
+.social-media i {
+    font-size: 200%;
+    color:#002868;
+
+}
 
   /* media queries for screens 650px and down */
 

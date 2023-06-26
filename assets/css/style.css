@@ -15,7 +15,10 @@
 body {
     font-family: karla;
     font-weight: 300;
-    background-color: #cfd4d8 
+    background-color: #cfd4d8;
+    display: flex;
+    flex-direction: column;
+    height:100vh
 }
 
 /* Logo */
@@ -68,7 +71,10 @@ body {
     width:600px;
     border: 2px solid;
     border-radius: 10px;
-    box-shadow: inset 0 0 15px;
+    /* box-shadow: inset 0 0 15px; */
+
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     padding:15px 75px;
     gap:15px;
     margin:auto;
@@ -193,7 +199,6 @@ body {
     grid-template-rows: 100px 100px;
     border-width: 3px;
     
-  
 }
 
 .answer-btn:hover {
@@ -294,9 +299,7 @@ Correct and incorrect answers */
 
 }
 
-
   /* game over modal */
-
 
   #gameover-modal-container {
     box-sizing: border-box;
@@ -315,7 +318,8 @@ Correct and incorrect answers */
     padding:20px;
     max-width:600px;
     margin:auto;
-    box-shadow: inset 0 0 15px;
+    /* box-shadow: inset 0 0 15px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   
   }#modal >p{
     font-size: 1.5rem;
@@ -323,12 +327,14 @@ Correct and incorrect answers */
 
   #modal >h2 {
     font-size: 1.75rem;
+
   }
 
 
   footer {
-    position: fixed;
+    position: relative;
     bottom: 0px;
+    margin-top: auto;
    }
   
 
@@ -342,8 +348,7 @@ Correct and incorrect answers */
     align-items: center;
     gap: 45px;
     list-style-type:none;
-    /* position:float-right;
-    bottom:0; */
+    width: 100vw;    
 
   }
 
@@ -352,6 +357,10 @@ Correct and incorrect answers */
     color:#002868;
 
 }
+.social-media i:hover {
+    color:white
+}
+
 
   /* media queries for screens 650px and down */
 
@@ -373,7 +382,7 @@ Correct and incorrect answers */
 
 
   #answer-buttons {
-    grid-template-columns: 200px;
+    grid-template-columns: 225px;
     grid-template-rows: repeat(4,75px);
     /* width:65vw; */
   }

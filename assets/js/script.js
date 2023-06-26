@@ -153,12 +153,11 @@ function selectAnswer(e) {
     //set the status for all four buttons
     Array.from(answerButtonsElement.children).forEach(button => {
         setAnswerStatus(button,button.dataset.correct)
-        button.disabled=true; // diables answer button to prevent user from incremeting the score by keeping slecting the correct answer    
+        button.disabled=true; // diables answer button to prevent user from incremeting the score by keeping selecting the correct answer    
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
         nextButton.classList.remove('hide')
     } else {
-      
         setTimeout(gameOver, 1000); // add timeout to allow the final answer selected to be seen before calling modal
         timerContainer.classList.add('hide-timer')
     }    
@@ -209,7 +208,7 @@ function updateIncorrectScore () {
  /**countdown timer*/
  function countDowntimer () {
        // timerContainer.classList.remove('hide')
-        let currentTime=20;
+        let currentTime=60;
         quizTimer =setInterval( function () {
             currentTime--;
 

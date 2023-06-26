@@ -241,7 +241,7 @@ Correct and incorrect answers */
 /* flash green when right answer */
 /* Concept from https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3 */
 .blink {
-    animation:  blinker 1s linear infinite;
+    animation:  blinker 1s linear 3;
     /* animation-duration: 5s; */
     
   }

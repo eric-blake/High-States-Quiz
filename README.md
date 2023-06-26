@@ -34,17 +34,16 @@ The high states game is a quiz based game that tests the users knowledge of the 
 
 
 ### Enter username section:
-* The user must enter thier username before stating the quiz.
+* The user must enter their username before stating the quiz.
+* the uesename must be at least two characters long or a username alert will be displayed.
 <img src="assets/documentation/big-states-quiz-username.PNG" alt="Screenshot of username entry field">
 
 ### Questions and answers box:
-* This section will allow the user to see what events are on over the next few months.
-* This section will be updated as these events change to keep the user up to date.
+* This section will show teh question and four possible answers.
 <img src="assets/documentation/big-states-quiz-questions-and-answers.PNG" alt="Screenshot of questions and answers box">
 
 ### Scoreboard:
-* The attractions section will provide the user with a description of the attraction and a supporting image to see what the attraction looks like.
-* This section is valuable to the user as they will be able to easily identify attractions of interest to them.
+* The scoreboard will increment the correct and incorrect answers.
 <img src="assets/documentation/big-states-quiz-scoreboard.PNG" alt="Screenshot of scoreboard">
 
 ### Countdown timer:
@@ -52,8 +51,13 @@ The high states game is a quiz based game that tests the users knowledge of the 
 * The timer counts down from 60 seconds, and after 60 seconds the Game-over function is called.
 <img src="assets/documentation/big-states-quiz-timer.PNG" alt="Screenshot of countdown timer">
 
+### Gameover modal:
+* After 60 seconds has elapased, the game is over and the user will be presented with their final score
+<img src="assets/documentation/big-states-quiz-game-over.PNG" alt="Screenshot of gameover message">
+
+
 ### The Footer:
-* The footer section includeso the relevant social media sites for the High states game
+* The footer section includes the relevant social media sites for the High states game
 * The links will open to a new tab to allow easy navigation for the user.
 <img src="assets/documentation/big-states-quiz-footer.PNG" alt="Screenshot of footer">
 

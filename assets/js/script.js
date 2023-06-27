@@ -208,7 +208,7 @@ function updateIncorrectScore () {
  /**countdown timer*/
  function countDowntimer () {
        // timerContainer.classList.remove('hide')
-        let currentTime=60;
+        let currentTime=2;
         quizTimer =setInterval( function () {
             currentTime--;
 

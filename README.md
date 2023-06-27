@@ -3,7 +3,8 @@
 <img src="assets/documentation/high-states-quiz-mockup.PNG" alt="Screenshot from http://ami.responsivedesign.is/ website, that show how the website looks on commons screen sizes">
 
 The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many question as possbile in 60 seconds. At the end of the game the user is presented with their score. 
--By Eric Blake
+
+- By Eric Blake
 
 # [Live site](https://eric-blake.github.io/High-States-Quiz/ "Live site") 
 
@@ -59,7 +60,7 @@ The high states game is a quiz based game that tests the users knowledge of the 
 ### The Footer:
 * The footer section includes the relevant social media sites for the High states game
 * The links will open to a new tab to allow easy navigation for the user.
-<img src="assets/documentation/big-states-quiz-footer.PNG" alt="Screenshot of footer">
+<img src="assets/documentation/high-states-quiz-footer.PNG" alt="Screenshot of footer">
 
 ### Features left to implement:
 N/A
@@ -72,7 +73,7 @@ N/A
 | ------------- | ------------- |
 | This site works in different browsers: Chrome, Microsoft Edge, Firefox, Safari | Pass|
 | This site is responsive, looks good and functions on all standard screen sizes using the devtools device | Pass  |
-| The navigation, header, about us and contact text are all readable and easy to understand  | Pass |
+| The header, quiz page and are all readable and easy to understand  | Pass |
   
 ### Validator Testing:
 * HTML
@@ -86,10 +87,10 @@ N/A
 * Accessibility
     * I confirmed that the colors and fonts used are easy to read and accessible by running it through Google Chrome lighthouse in devtools.
      #### Desktop 
-     <img src="assets/documentation/lighthouse-desktop.PNG" alt="Screenshot of Lighthouse desktop report">
+     <img src="assets/documentation/high-states-quiz-lighthouse-desktop.PNG" alt="Screenshot of Lighthouse desktop report">
 
      #### Mobile
-     <img src="assets/documentation/lighthouse-mobile.png" alt="Screenshot of Lighthouse mobile report">
+     <img src="assets/documentation/high-states-quiz-lighthouse-mobile.PNG" alt="Screenshot of Lighthouse mobile report">
 
 
 ## Bugs

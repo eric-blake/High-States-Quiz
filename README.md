@@ -5,7 +5,7 @@
 The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many question as possbile in 60 seconds. At the end of the game the user is presented with their score. 
 -By Eric Blake
 
-# [Live site](https:"Live site") 
+# [Live site](https://github.com/eric-blake/High-States-Quiz:"Live site") 
 
 ## UX design
 
@@ -22,7 +22,7 @@ The high states game is a quiz based game that tests the users knowledge of the 
 
 ### Wireframe
 * The wireframe was created using Mockflow.
-  <img src="assets/" alt="Screenshot of Wireframe">
+  <img src="assets/documentation/high-states-quiz-wireframe-home-page.PNG" alt="Screenshot of Wireframe home page">
 
 
 ## Features
@@ -30,30 +30,30 @@ The high states game is a quiz based game that tests the users knowledge of the 
 ### The welcome page:
 * The landing page includes a header and photograph to allow the user to see the name of the quiz.
 * This section gives the user the intructions for the quiz
-<img src="assets/documentation/big-states-quiz-welcome.PNG" alt="Screenshot of welcome page">
+<img src="assets/documentation/high-states-quiz-welcome.PNG" alt="Screenshot of welcome page">
 
 
 ### Enter username section:
 * The user must enter their username before stating the quiz.
 * the uesename must be at least two characters long or a username alert will be displayed.
-<img src="assets/documentation/big-states-quiz-username.PNG" alt="Screenshot of username entry field">
+<img src="assets/documentation/high-states-quiz-username.PNG" alt="Screenshot of username entry field">
 
 ### Questions and answers box:
-* This section will show teh question and four possible answers.
-<img src="assets/documentation/big-states-quiz-questions-and-answers.PNG" alt="Screenshot of questions and answers box">
+* This section will show the question and four possible answers.
+<img src="assets/documentation/high-states-quiz-questions-and-answers.PNG" alt="Screenshot of questions and answers box">
 
 ### Scoreboard:
 * The scoreboard will increment the correct and incorrect answers.
-<img src="assets/documentation/big-states-quiz-scoreboard.PNG" alt="Screenshot of scoreboard">
+<img src="assets/documentation/high-states-quiz-scoreboard.PNG" alt="Screenshot of scoreboard">
 
 ### Countdown timer:
 * The countdown timer starts when the user clicks on play quiz. The first question is presented to the user
 * The timer counts down from 60 seconds, and after 60 seconds the Game-over function is called.
-<img src="assets/documentation/big-states-quiz-timer.PNG" alt="Screenshot of countdown timer">
+<img src="assets/documentation/high-states-quiz-timer.PNG" alt="Screenshot of countdown timer">
 
 ### Gameover modal:
 * After 60 seconds has elapased, the game is over and the user will be presented with their final score
-<img src="assets/documentation/big-states-quiz-game-over.PNG" alt="Screenshot of gameover message">
+<img src="assets/documentation/high-states-quiz-game-over.PNG" alt="Screenshot of gameover message">
 
 
 ### The Footer:

@@ -1,6 +1,6 @@
 # High States Quiz
 
-<img src="assets/documentation/big-states-quiz-mockup.PNG" alt="Screenshot from http://ami.responsivedesign.is/ website, that show how the website looks on commons screen sizes">
+<img src="assets/documentation/high-states-quiz-mockup.PNG" alt="Screenshot from http://ami.responsivedesign.is/ website, that show how the website looks on commons screen sizes">
 
 The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many question as possbile in 60 seconds. At the end of the game the user is presented with their score. 
 -By Eric Blake
@@ -77,10 +77,10 @@ N/A
 ### Validator Testing:
 * HTML
     * No errors were returned when passing through the official W3C validator. 
-    <img src="assets/documentation/W" alt="Screenshot of W3C HTML Validator results">
+    <img src="assets/documentation/w3c-html-validator.PNG" alt="Screenshot of W3C HTML Validator results">
 * CSS
     * No errors were found when passing through the official (Jigsaw) validator.
-    <img src="assets/documentation/" alt="Screenshot of W3C CSS Validator results">
+    <img src="aassets/documentation/w3c-css-validator.PNG" alt="Screenshot of W3C CSS Validator results">
 * Javascript
 
 * Accessibility

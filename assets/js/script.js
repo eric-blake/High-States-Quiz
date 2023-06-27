@@ -1,53 +1,53 @@
 
 
 //Button variables
-const playButton = document.getElementById('play-btn')
-const nextButton =document.getElementById('next-btn')
-const answerButtonsElement = document.getElementById('answer-buttons')
-const playAgainButton =document.getElementById('play-again-btn')
-const alertButton = document.getElementById('alert-btn')
+const playButton = document.getElementById('play-btn');
+const nextButton =document.getElementById('next-btn');
+const answerButtonsElement = document.getElementById('answer-buttons');
+const playAgainButton =document.getElementById('play-again-btn');
+const alertButton = document.getElementById('alert-btn');
 //Container variables
-const welcomeContainer = document.getElementById('welcome-container')
-const questionContainer = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const usernameAlertContainer=document.getElementById('username-alert-container')
-const usernameContainer =document.getElementById('username-container')
-const welcomeMessage=document.getElementById('welcome-message')
+const welcomeContainer = document.getElementById('welcome-container');
+const questionContainer = document.getElementById('question-container');
+const questionElement = document.getElementById('question');
+const usernameAlertContainer=document.getElementById('username-alert-container');
+const usernameContainer =document.getElementById('username-container');
+const welcomeMessage=document.getElementById('welcome-message');
 
 //Scores variables
-const scoreBoardContainer = document.getElementById('scoreboard-container')
-const score = document.getElementById('score')
-const incorrectScore = document.getElementById('incorrect')
-const finalScore =document.getElementById('final-score')
-const finalScoreName =document.getElementById('final-score-name')
+const scoreBoardContainer = document.getElementById('scoreboard-container');
+const score = document.getElementById('score');
+const incorrectScore = document.getElementById('incorrect');
+const finalScore =document.getElementById('final-score');
+const finalScoreName =document.getElementById('final-score-name');
 //Timer variables
-const timerContainer =document.getElementById('timer-container')
-const time=document.getElementById('time')
+const timerContainer =document.getElementById('timer-container');
+const time=document.getElementById('time');
 //Modal variables
-const gameOverModal =document.getElementById('gameover-modal-container')
+const gameOverModal =document.getElementById('gameover-modal-container');
 //Username input variable
-let userName = document.getElementById('username').focus()
+let userName = document.getElementById('username').focus();
 //Questions variables
-let shuffledQuestions
-let currentQuestionIndex
-let shuffledAnswers
+let shuffledQuestions;
+let currentQuestionIndex;
+let shuffledAnswers;
 
 //Event listeners
-playButton.addEventListener('click', checkUsername)
-playAgainButton.addEventListener('click',playQuiz)
-alertButton.addEventListener('click', resetPage)
+playButton.addEventListener('click', checkUsername);
+playAgainButton.addEventListener('click',playQuiz);
+alertButton.addEventListener('click', resetPage);
 
 document.getElementById('username').addEventListener('keydown', function(event) {
     if(event.key ==='Enter') {
         checkUsername();
     }
-})
+});
 
 
 nextButton.addEventListener('click' ,() => {
     currentQuestionIndex++;
     getQuestion();
-})
+});
 
 
 //Functions
@@ -60,7 +60,7 @@ if (userName.length >=2) {
     playQuiz();
 }
 else {
-    usernameAlert()
+    usernameAlert();
 }
 
 }
@@ -68,11 +68,11 @@ else {
 function usernameAlert() {
      //welcomeMessage.style.display = "none";
      usernameContainer.style.display = "none";
-     usernameAlertContainer.classList.remove('hide')
+     usernameAlertContainer.classList.remove('hide');
 }
 /**Resets page after username alert message*/
 function resetPage () {
-    usernameAlertContainer.classList.add('hide')
+    usernameAlertContainer.classList.add('hide');
     usernameContainer.style.display = "flex";
 }
 
@@ -88,11 +88,11 @@ function playQuiz() {
     scoreBoardContainer.classList.remove('hide-scoreboard');
     timerContainer.classList.remove('hide-timer');
    //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
-    shuffledQuestions=questions.sort(() => Math.random() - .5) ; // gets a randow question
-    currentQuestionIndex = 0  //set to 0 as we are starting on first question
+    shuffledQuestions=questions.sort(() => Math.random() - 0.5) ; // gets a randow question
+    currentQuestionIndex = 0; //set to 0 as we are starting on first question
     getQuestion();
     score.innerText=0;
-    incorrect.innerText=0;
+    //incorrect.innerText=0;
     countDowntimer ();
     
 }
@@ -100,30 +100,30 @@ function playQuiz() {
 // Get Question and show question and answers concept from tutorial https://www.youtube.com/watch?v=riDzcEQbX6k
 /**Gets question from list of questions */
 function getQuestion() {
-    resetQuestionContainer()
+    resetQuestionContainer();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
     //console.log(question, currentQuestionIndex);
-    console.log(shuffledQuestions, shuffledAnswers)
+    console.log(shuffledQuestions, shuffledAnswers);
 
     
 }
 /**Shows question in question container*/
 function showQuestion(quest) {
-    questionElement.innerText=quest.quest //renamed question to quest to make easier to read
+    questionElement.innerText=quest.quest; //renamed question to quest to make easier to read
     //shuffle the answers and loop through the question answers, get single answer and create a button for each
-    shuffledAnswers=shuffledQuestions[currentQuestionIndex].answers.sort(() => Math.random() - .5);  // shuffles the answers
+    shuffledAnswers=shuffledQuestions[currentQuestionIndex].answers.sort(() => Math.random() - 0.5);  // shuffles the answers
     shuffledAnswers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText=answer.text;
         button.classList.add('answer-btn','btn');
          if (answer.correct) {
-         button.dataset.correct =answer.correct //add data attribute to the correct button
+         button.dataset.correct =answer.correct; //add data attribute to the correct button
     
         }
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
 
-    })
+    });
     
      }
     
@@ -131,35 +131,35 @@ function showQuestion(quest) {
 Removes next betton until answer is selected
 */
 function resetQuestionContainer  () {
-    nextButton.classList.add('hide')
+    nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {   //Loop through all the children for answer button elements and remove first child
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
 
 }
 
 /**Selects answer question in question container*/
 function selectAnswer(e) {
-    const selectedButton = e.target //get the button we clicked on
-    selectedButton.classList.add('selected')
+    const selectedButton = e.target; //get the button we clicked on
+    selectedButton.classList.add('selected');
     const correct = selectedButton.dataset.correct;
     
     if (correct) {
-        incrementScore ()   
+        incrementScore ();
     }
     else {
-        updateIncorrectScore ()
+        updateIncorrectScore ();
     }
     //set the status for all four buttons
     Array.from(answerButtonsElement.children).forEach(button => {
-        setAnswerStatus(button,button.dataset.correct)
+        setAnswerStatus(button,button.dataset.correct);
         button.disabled=true; // diables answer button to prevent user from incremeting the score by keeping selecting the correct answer    
-    })
+    });
     if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
-        nextButton.classList.remove('hide')
+        nextButton.classList.remove('hide');
     } else {
         setTimeout(gameOver, 1000); // add timeout to allow the final answer selected to be seen before calling modal
-        timerContainer.classList.add('hide-timer')
+        timerContainer.classList.add('hide-timer');
     }    
    
     }
@@ -167,11 +167,11 @@ function selectAnswer(e) {
 
 //Color code correct and incorrect answers
 function setAnswerStatus (element, correct) {
-    clearAnswerStatus (element)
+    clearAnswerStatus (element);
     if (correct) {
-        element.classList.add('blink')
-        element.classList.remove('selected')
-        element.classList.add('correct')
+        element.classList.add('blink');
+        element.classList.remove('selected');
+        element.classList.add('correct');
         
     }
     else {
@@ -183,8 +183,8 @@ function setAnswerStatus (element, correct) {
 
 
 function clearAnswerStatus (element)  {
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
 }
 
 
@@ -216,9 +216,9 @@ function updateIncorrectScore () {
             time.textContent=currentTime;
             }
             else if (currentTime === -1) {
-                clearInterval(quizTimer)
-                questionContainer.classList.add('hide')
-                gameOver () 
+                clearInterval(quizTimer);
+                questionContainer.classList.add('hide');
+                gameOver () ;
             }
         },
             1000);
@@ -228,17 +228,17 @@ function updateIncorrectScore () {
         
   /**Gameover*/   
  function gameOver () {
-    questionContainer.classList.add('hide')
-    gameOverModal.classList.remove('hide')
-    finalScoreMessage ()
-    playAgainButton.classList.remove('hide')
+    questionContainer.classList.add('hide');
+    gameOverModal.classList.remove('hide');
+    finalScoreMessage ();
+    playAgainButton.classList.remove('hide');
  }
 
 
   /**Gamover modal messages*/
 function finalScoreMessage () {
 if (score.innerHTML < 8) {
-    finalScoreName.innerHTML = `Hard luck ${userName}` 
+    finalScoreName.innerHTML = `Hard luck ${userName}`;
     finalScore.innerHTML = `Your final score is ${score.innerText} out of ${parseInt(score.innerText) + parseInt(incorrect.innerText)}`;
 }
 else if (score.innerHTML >= 8) {
@@ -246,7 +246,7 @@ else if (score.innerHTML >= 8) {
     finalScore.innerHTML = `Your final score is ${score.innerText} out of ${parseInt(score.innerText) + parseInt(incorrect.innerText)}`;
 }
 else {
-    alert("unknown score")
+    alert("unknown score");
 }
 }
 

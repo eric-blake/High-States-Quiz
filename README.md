@@ -5,7 +5,7 @@
 The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many question as possbile in 60 seconds. At the end of the game the user is presented with their score. 
 -By Eric Blake
 
-# [Live site](https://github.com/eric-blake/High-States-Quiz:"Live site") 
+# [Live site](https://eric-blake.github.io/High-States-Quiz/ "Live site") 
 
 ## UX design
 

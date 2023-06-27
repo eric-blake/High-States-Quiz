@@ -22,9 +22,9 @@ The high states game is a quiz based game that tests the users knowledge of the 
 
 ### Wireframe
 * The wireframe was created using Mockflow.
-  <img src="assets/documentation/high-states-quiz-wireframe-home-page.PNG" alt="Screenshot of Wireframe home page">
-
-
+ <img src="assets/documentation/high-states-quiz-wireframe-home-page.PNG" alt="Screenshot of Wireframe home page">
+ <img src="assets/documentation/high-states-quiz-wireframe-quiz-page.PNG" alt="Screenshot of Wireframe quiz page">
+ <img src="assets/documentation/high-states-quiz-wireframe-game-over.PNG" alt="Screenshot of Wireframe game over modal">
 ## Features
 
 ### The welcome page:

@@ -4,14 +4,14 @@
 
 The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many question as possbile in 60 seconds. At the end of the game the user is presented with their score. 
 
-- By Eric Blake
+-By Eric Blake
 
 # [Live site](https://eric-blake.github.io/High-States-Quiz/ "Live site") 
 
 ## UX design
 
 ### Colors
-* Keeping with the colours of the US flag theme, the color used for the questions is a navy blue #002868.
+* Keeping with the colours of the US flag theme, the color used for the questions is a navy blue #002868 and white
 * The background color used is a form of grey #cfd4d8.
 
 ### Font
@@ -26,6 +26,7 @@ The high states game is a quiz based game that tests the users knowledge of the 
  <img src="assets/documentation/high-states-quiz-wireframe-home-page.PNG" alt="Screenshot of Wireframe home page">
  <img src="assets/documentation/high-states-quiz-wireframe-quiz-page.PNG" alt="Screenshot of Wireframe quiz page">
  <img src="assets/documentation/high-states-quiz-wireframe-game-over.PNG" alt="Screenshot of Wireframe game over modal">
+
 ## Features
 
 ### The welcome page:
@@ -63,7 +64,7 @@ The high states game is a quiz based game that tests the users knowledge of the 
 <img src="assets/documentation/high-states-quiz-footer.PNG" alt="Screenshot of footer">
 
 ### Features left to implement:
-N/A
+Add users score to a top scores table 
 
 
 ## Testing:
@@ -73,7 +74,8 @@ N/A
 | ------------- | ------------- |
 | This site works in different browsers: Chrome, Microsoft Edge, Firefox, Safari | Pass|
 | This site is responsive, looks good and functions on all standard screen sizes using the devtools device | Pass  |
-| The header, quiz page and are all readable and easy to understand  | Pass |
+| The welcome page and quiz page and are all readable and easy to understand  | Pass |
+|   |  |
   
 ### Validator Testing:
 * HTML
@@ -83,6 +85,7 @@ N/A
     * No errors were found when passing through the official (Jigsaw) validator.
     <img src="aassets/documentation/w3c-css-validator.PNG" alt="Screenshot of W3C CSS Validator results">
 * Javascript
+
 
 * Accessibility
     * I confirmed that the colors and fonts used are easy to read and accessible by running it through Google Chrome lighthouse in devtools.
@@ -97,13 +100,13 @@ N/A
 * ### Fixed bugs
 | Bug | Fix |
 | ------------- | ------------- |
-| Bug 1 | Bug 1 |
-| Bug 2 | Bug 2  |
-| Bug 3 | Bug 3  |
+| User can keep clicking on correect answer and increment score | Add disable button once answer button is selected |
+| Game over function called immediately on selecting answer for last question, preventing user from seeing if their answer was correct  | add timeout to allow the final answer selected to be seen before calling modal  |
+| Only answers for first question were being shuffled | Moved shuffle answer sort method to correct function|
+| Footer was not at bottom of page in quiz page | Updated position property in CSS |
 
 * ### Unfixed Bugs
 No unfixed bugs
-
 
 
 ## Deployment and local development
@@ -134,12 +137,11 @@ By forking the repository, you can make a copy of the repository and make change
  * The icons in the footer were taken from [Font Awesome](https://fontawesome.com/ "Font Awesome").
  * The code to make the CSS flexbox was taken from [CSS-tricks.com](https://css-tricks.com/snippets/css/a-guide-to-flexbox/ "CSS-tricks" ).
  * The code to make the CSS Grid was taken from [CSS-tricks.com](https://css-tricks.com/snippets/css/complete-guide-grid/ "CSS-tricks").
- * Instructions throughout project was taken from [Code Institute](https://codeinstitute.net/ie/ "Code Institute") Tutorials and Love Running project.
- * Description of walled garden in Attractions sections from [Wikipedia ](https://en.wikipedia.org/wiki/Walled_garden "Wikipedia").
- * The wireframe was created using [Mockflow ](https://mockflow.com/ "Mockflow").
- * The Favicon was taken from..........
- * Get Question and show questions and answers concept from Youtube tutorial[] (https://www.youtube.com/watch?v=riDzcEQbX6k "Youtube" )
- * Countdown timer concept from (https://www.youtube.com/watch?v=GhePFBkdNYk)
+ * Instructions throughout project was taken from [Code Institute](https://codeinstitute.net/ie/ "Code Institute") Tutorials and Love Maths project.
+ * The wireframe was created using [Mockflow](https://mockflow.com/ "Mockflow").
+ * The Favicon was taken from [Icons8](https://icons8.com/ "Icons8").
+ * Get Question and show questions and answers concept from Youtube tutorial[Youtube](https://www.youtube.com/watch?v=riDzcEQbX6k "Youtube")
+ * Countdown timer concept from Youtube tutorial [Youtube](https://www.youtube.com/watch?v=GhePFBkdNYk  "Youtube")
 
 ## Acknowledgements
 *  Mitko Bachvarov. My mentor who provided me with constructive feedback throughout this project

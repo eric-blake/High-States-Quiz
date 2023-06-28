@@ -11,7 +11,7 @@ const welcomeContainer = document.getElementById('welcome-container');
 const questionContainer = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const usernameAlertContainer=document.getElementById('username-alert-container');
-const usernameContainer =document.getElementById('username-container')
+const usernameContainer =document.getElementById('username-container');
 //Scores variables
 const scoreBoardContainer = document.getElementById('scoreboard-container');
 const score = document.getElementById('score');
@@ -28,6 +28,8 @@ let userName = document.getElementById('username').focus();
 let shuffledQuestions;
 let currentQuestionIndex;
 let shuffledAnswers;
+let incorrect;
+let quizTimer;
 
 //Event listeners
 playButton.addEventListener('click', checkUsername);

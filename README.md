@@ -2,7 +2,7 @@
 
 <img src="assets/documentation/high-states-quiz-mockup.PNG" alt="Screenshot from http://ami.responsivedesign.is/ website, that show how the website looks on commons screen sizes">
 
-The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many question as possbile in 60 seconds. At the end of the game the user is presented with their score. 
+The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many questions as possible in 60 seconds. At the end of the game the user is presented with their score. 
 
 -By Eric Blake
 
@@ -31,18 +31,26 @@ The high states game is a quiz based game that tests the users knowledge of the 
 
 ### The welcome page:
 * The landing page includes a header and photograph to allow the user to see the name of the quiz.
-* This section gives the user the intructions for the quiz
+* This section gives the user the instructions for the quiz
 <img src="assets/documentation/high-states-quiz-welcome.PNG" alt="Screenshot of welcome page">
 
 
 ### Enter username section:
 * The user must enter their username before stating the quiz.
-* the uesename must be at least two characters long or a username alert will be displayed.
+* The username must be at least two characters long or a username alert will be displayed.
 <img src="assets/documentation/high-states-quiz-username.PNG" alt="Screenshot of username entry field">
 
 ### Questions and answers box:
 * This section will show the question and four possible answers.
 <img src="assets/documentation/high-states-quiz-questions-and-answers.PNG" alt="Screenshot of questions and answers box">
+
+### Correct answer selected:
+* If the correct answer is selected the button will flash green three times and then remain green
+<img src="assets/documentation/high-states-quiz-correct-answer.PNG" alt="Screenshot of Correct answer selected:">
+
+### Incorrect answer selected:
+* If the incorrect answer is selected the button will turn red and the correct answer will flash green three times
+<img src="assets/documentation/high-states-quiz-incorrect-answer.PNG" alt="Screenshot of ncorrect answer selected">
 
 ### Scoreboard:
 * The scoreboard will increment the correct and incorrect answers.
@@ -53,8 +61,8 @@ The high states game is a quiz based game that tests the users knowledge of the 
 * The timer counts down from 60 seconds, and after 60 seconds the Game-over function is called.
 <img src="assets/documentation/high-states-quiz-timer.PNG" alt="Screenshot of countdown timer">
 
-### Gameover modal:
-* After 60 seconds has elapased, the game is over and the user will be presented with their final score
+### Game over modal:
+* After 60 seconds has elapsed, the game is over and the user will be presented with their final score
 <img src="assets/documentation/high-states-quiz-game-over.PNG" alt="Screenshot of gameover message">
 
 
@@ -83,7 +91,7 @@ Add users score to a top scores table
     <img src="assets/documentation/w3c-html-validator.PNG" alt="Screenshot of W3C HTML Validator results">
 * CSS
     * No errors were found when passing through the official (Jigsaw) validator.
-    <img src="aassets/documentation/w3c-css-validator.PNG" alt="Screenshot of W3C CSS Validator results">
+    <img src="assets/documentation/w3c-css-validator.PNG" alt="Screenshot of W3C CSS Validator results">
 * Javascript
 
 
@@ -100,7 +108,7 @@ Add users score to a top scores table
 * ### Fixed bugs
 | Bug | Fix |
 | ------------- | ------------- |
-| User can keep clicking on correect answer and increment score | Add disable button once answer button is selected |
+| User can keep clicking on correct answer and increment the score | Add disable button once answer button is selected |
 | Game over function called immediately on selecting answer for last question, preventing user from seeing if their answer was correct  | add timeout to allow the final answer selected to be seen before calling modal  |
 | Only answers for first question were being shuffled | Moved shuffle answer sort method to correct function|
 | Footer was not at bottom of page in quiz page | Updated position property in CSS |
@@ -112,7 +120,7 @@ No unfixed bugs
 ## Deployment and local development
 ### Deployment
 The site was deployed to GitHub pages. The steps to deploy are as follows
-* In the Github repository, navigate to the Setting tab.
+* In the Github repository, navigate to the Settings tab.
 * From the source section drop-down menu, select the Master Branch.
 * Once the Master Branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
@@ -144,4 +152,4 @@ By forking the repository, you can make a copy of the repository and make change
  * Countdown timer concept from Youtube tutorial [Youtube](https://www.youtube.com/watch?v=GhePFBkdNYk  "Youtube")
 
 ## Acknowledgements
-*  Mitko Bachvarov. My mentor who provided me with constructive feedback throughout this project
+*  Mitko Bachvarov. My mentor who provided me with advice and feedback throughout this project

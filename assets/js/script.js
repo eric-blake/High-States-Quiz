@@ -15,6 +15,7 @@ const usernameContainer =document.getElementById('username-container');
 //Scores variables
 const scoreBoardContainer = document.getElementById('scoreboard-container');
 const score = document.getElementById('score');
+const incorrect=document.getElementById('incorrect');
 const finalScore =document.getElementById('final-score');
 const finalScoreName =document.getElementById('final-score-name');
 //Timer variables
@@ -28,7 +29,6 @@ let userName = document.getElementById('username').focus();
 let shuffledQuestions;
 let currentQuestionIndex;
 let shuffledAnswers;
-let incorrect;
 let quizTimer;
 
 //Event listeners
@@ -91,7 +91,7 @@ function playQuiz() {
     currentQuestionIndex = 0; //set to 0 as we are starting on first question
     getQuestion();
     score.innerText=0;
-    //incorrect.innerText=0;
+    incorrect.innerText=0;
     countDowntimer ();
     
 }
@@ -207,7 +207,7 @@ function updateIncorrectScore () {
  /**countdown timer*/
  function countDowntimer () {
        // timerContainer.classList.remove('hide')
-        let currentTime=60;
+        let currentTime=10;
         quizTimer =setInterval(function () {
             currentTime--;
 

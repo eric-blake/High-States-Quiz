@@ -49,7 +49,7 @@ The high states game is a quiz based game that tests the users knowledge of the 
 
 ### Incorrect answer selected:
 * If the incorrect answer is selected the button will turn red and the correct answer will flash green three times
-<img src="assets/documentation/high-states-quiz-incorrect-answer.PNG" alt="Screenshot of ncorrect answer selected">
+<img src="assets/documentation/high-states-quiz-incorrect-answer.PNG" alt="Screenshot of incorrect answer selected">
 
 ### Scoreboard:
 * The scoreboard will increment the correct and incorrect answers.
@@ -119,7 +119,7 @@ Add users score to a top scores table
 | Bug | Fix |
 | ------------- | ------------- |
 | User can keep clicking on correct answer and increment the score | Add disable button once answer button is selected |
-| Game over function called immediately on selecting answer for last question, preventing user from seeing if their answer was correct  | add timeout to allow the final answer selected to be seen before calling modal  |
+| Game over function called immediately on selecting answer for last question, preventing user from seeing if their answer was correct  | Add timeout to allow the final answer selected to be seen before calling modal  |
 | Only answers for first question were being shuffled | Moved shuffle answer sort method to correct function|
 | Footer was not at bottom of page in quiz page | Updated position property in CSS |
 
@@ -158,7 +158,7 @@ By forking the repository, you can make a copy of the repository and make change
  * Instructions throughout project was taken from [Code Institute](https://codeinstitute.net/ie/ "Code Institute") Tutorials and Love Maths project.
  * The wireframe was created using [Mockflow](https://mockflow.com/ "Mockflow").
  * The Favicon was taken from [Icons8](https://icons8.com/ "Icons8").
- * Get Question and show questions and answers concept from Youtube tutorial[Youtube](https://www.youtube.com/watch?v=riDzcEQbX6k "Youtube")
+ * Get Question and show questions and answers concept from Youtube tutorial [Youtube](https://www.youtube.com/watch?v=riDzcEQbX6k "Youtube")
  * Countdown timer concept from Youtube tutorial [Youtube](https://www.youtube.com/watch?v=GhePFBkdNYk  "Youtube")
 
 ## Acknowledgements

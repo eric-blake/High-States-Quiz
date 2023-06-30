@@ -160,6 +160,7 @@ By forking the repository, you can make a copy of the repository and make change
  * The Favicon was taken from [Icons8](https://icons8.com/ "Icons8").
  * Get Question and show questions and answers concept from Youtube tutorial [Youtube](https://www.youtube.com/watch?v=riDzcEQbX6k "Youtube")
  * Countdown timer concept from Youtube tutorial [Youtube](https://www.youtube.com/watch?v=GhePFBkdNYk  "Youtube")
+ * How to flash buttons concept from stack overflow [Stack overflow](https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3  "Stack overflow")
 
 ## Acknowledgements
 *  Mitko Bachvarov. My mentor who provided me with advice and feedback throughout this project

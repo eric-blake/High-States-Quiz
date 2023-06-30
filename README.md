@@ -2,7 +2,7 @@
 
 <img src="assets/documentation/high-states-quiz-mockup.PNG" alt="Screenshot from http://ami.responsivedesign.is/ website, that show how the website looks on commons screen sizes">
 
-The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many questions as possible in 60 seconds. At the end of the game the user is presented with their score. 
+The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many questions as possible in 60 seconds. At the end of the game the user is presented with their final score. 
 
 -By Eric Blake
 
@@ -33,7 +33,6 @@ The high states game is a quiz based game that tests the users knowledge of the 
 * The landing page includes a header and photograph to allow the user to see the name of the quiz.
 * This section gives the user the instructions for the quiz
 <img src="assets/documentation/high-states-quiz-welcome.PNG" alt="Screenshot of welcome page">
-
 
 ### Enter username section:
 * The user must enter their username before stating the quiz.
@@ -83,8 +82,18 @@ Add users score to a top scores table
 | This site works in different browsers: Chrome, Microsoft Edge, Firefox, Safari | Pass|
 | This site is responsive, looks good and functions on all standard screen sizes using the devtools device | Pass  |
 | The welcome page and quiz page and are all readable and easy to understand  | Pass |
-|   |  |
-  
+| If no username or invalid username is entered an invalid username message is displayed   |Pass  | 
+| When valid username is entered and play button selected the quiz begins  |Pass  |
+| When quiz begins a question and four answers are displayed   |Pass   | 
+| When quiz begins the countdown timer starts counting down from 60 seconds  |Pass   | 
+| When user selects answer it will flash green if correct and turn red if incorrect | Pass  | 
+| When user selects answer it will turn red if incorrect and correct answer will flash green  | Pass  | 
+| The scoreboard displays the number of correct and incorrect answers  | Pass  | 
+| The game over modal displays the users name and final score  | Pass  | 
+| When the user selects play again the quiz restarts  | Pass  | 
+
+
+
 ### Validator Testing:
 * HTML
     * No errors were returned when passing through the official W3C validator. 
@@ -93,7 +102,8 @@ Add users score to a top scores table
     * No errors were found when passing through the official (Jigsaw) validator.
     <img src="assets/documentation/w3c-css-validator.PNG" alt="Screenshot of W3C CSS Validator results">
 * Javascript
-
+  * No errors were returned when passing through JS Hint checker.
+    <img src="assets/documentation/high-states-quiz-jshint.PNG" alt="Screenshot of JSHint results">
 
 * Accessibility
     * I confirmed that the colors and fonts used are easy to read and accessible by running it through Google Chrome lighthouse in devtools.

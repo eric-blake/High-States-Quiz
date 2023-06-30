@@ -161,6 +161,7 @@ By forking the repository, you can make a copy of the repository and make change
  * Get Question and show questions and answers concept from Youtube tutorial [Youtube](https://www.youtube.com/watch?v=riDzcEQbX6k "Youtube")
  * Countdown timer concept from Youtube tutorial [Youtube](https://www.youtube.com/watch?v=GhePFBkdNYk  "Youtube")
  * How to flash buttons concept from stack overflow [Stack overflow](https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3  "Stack overflow")
+ * List of nicknames of U.S. states [Britannica](https://www.britannica.com/topic/list-of-nicknames-of-U-S-States-2130544 "Britannica")
 
 ## Acknowledgements
 *  Mitko Bachvarov. My mentor who provided me with advice and feedback throughout this project

@@ -261,7 +261,7 @@ const questions = [
             correct: true
         },
         {
-            text: "Arizona",
+            text: "Illinois",
             correct: false
         },
         {
@@ -283,7 +283,7 @@ const questions = [
             correct: true
         },
         {
-            text: "Hawaii",
+            text: "Maryland",
             correct: false
         },
         {
@@ -309,7 +309,7 @@ const questions = [
             correct: false
         },
         {
-            text: "Alaska",
+            text: "Oklahoma",
             correct: false
         },
         {
@@ -332,11 +332,11 @@ const questions = [
             correct: false
         },
         {
-            text: "Alaska",
+            text: "Wyoming",
             correct: false
         },
         {
-            text: "Alabama",
+            text: "Vermont",
             correct: false
         }
     
@@ -351,7 +351,7 @@ const questions = [
             correct: true
         },
         {
-            text: "Arizona",
+            text: "South Carolina",
             correct: false
         },
         {
@@ -359,7 +359,7 @@ const questions = [
             correct: false
         },
         {
-            text: "Hawaii",
+            text: "New Jersey",
             correct: false
         }
     
@@ -397,7 +397,7 @@ const questions = [
             correct: true
         },
         {
-            text: "Colorado",
+            text: "New Hampshire",
             correct: false
         },
         {
@@ -423,11 +423,11 @@ const questions = [
             correct: false
         },
         {
-            text: "Maryland",
+            text: "Nebraska",
             correct: false
         },
         {
-            text: "New Mexico",
+            text: "Minnesota",
             correct: false
         }
     
@@ -442,15 +442,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Indiana",
+            text: "Hawaii",
             correct: false
         },
         {
-            text: "Louisiana",
+            text: "California",
             correct: false
         },
         {
-            text: "Nebraska",
+            text: "Kentucky",
             correct: false
         }
     
@@ -587,7 +587,7 @@ const questions = [
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Arkansas",
             correct: false
         },
     
@@ -606,7 +606,7 @@ const questions = [
             correct: false
         },
         {
-            text: "Colorado",
+            text: "New Hampshire",
             correct: false
         },
         {
@@ -626,15 +626,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Pennsylvania",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Missouri",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Michigan",
             correct: false
         },
     
@@ -649,15 +649,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Michigan",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Oregon",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "South Dakota",
             correct: false
         },
     
@@ -671,15 +671,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Virginia",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Wisconsin",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Wyoming",
             correct: false
         },
     
@@ -693,7 +693,7 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Louisiana",
             correct: false
         },
         {
@@ -701,7 +701,7 @@ const questions = [
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Kansas",
             correct: false
         },
     
@@ -715,15 +715,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Kansas",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Georgia",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Alabama",
             correct: false
         },
     
@@ -737,15 +737,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Delaware",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Louisiana",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Nebraska",
             correct: false
         },
     
@@ -759,15 +759,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Nebraska",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "New Mexico",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "North Carolina",
             correct: false
         },
     
@@ -781,15 +781,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "North Carolina",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Utah",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Texas",
             correct: false
         },
     
@@ -803,15 +803,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Texas",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Ohio",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Mississippi",
             correct: false
         },
     
@@ -826,15 +826,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Mississippi",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Massachusetts",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Kansas",
             correct: false
         },
     
@@ -849,15 +849,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Kansas",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Arkansas",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Idaho",
             correct: false
         },
     
@@ -871,11 +871,11 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Idaho",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Louisiana",
             correct: false
         },
         {
@@ -893,15 +893,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Louisiana",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Minnesota",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Mississippi",
             correct: false
         },
     
@@ -915,15 +915,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Mississippi",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Nebraska",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Rhode Island",
             correct: false
         },
     
@@ -937,15 +937,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Rhode Island",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Montana",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Massachusetts",
             correct: false
         },
     
@@ -959,15 +959,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Massachusetts",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Iowa",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Indiana",
             correct: false
         },
     
@@ -981,7 +981,7 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Indiana",
             correct: false
         },
         {
@@ -989,7 +989,7 @@ const questions = [
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Maryland",
             correct: false
         },
     
@@ -1003,15 +1003,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Maryland",
+            correct: false
+        },
+        {
+            text: "Alabama",
             correct: false
         },
         {
             text: "Colorado",
-            correct: false
-        },
-        {
-            text: "Connecticut",
             correct: false
         },
     
@@ -1025,15 +1025,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Arizona",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Alaska",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "New Jersey",
             correct: false
         },
     
@@ -1047,15 +1047,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "New Jersey",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "North Dakota",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Tennessee",
             correct: false
         },
     
@@ -1069,15 +1069,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Tennessee",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Pennsylvania",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Ohio",
             correct: false
         },
     
@@ -1091,15 +1091,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Ohio",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Michigan",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Nevada",
             correct: false
         },
     
@@ -1113,15 +1113,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Michigan",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Utah",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "California",
             correct: false
         },
     
@@ -1135,15 +1135,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "California",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Massachusetts",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Nebraska",
             correct: false
         },
     
@@ -1157,15 +1157,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Nebraska",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Vermont",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Wisconsin",
             correct: false
         },
     
@@ -1179,11 +1179,11 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Vermont",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Wyoming",
             correct: false
         },
         {
@@ -1201,15 +1201,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "South Carolina",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Oklahoma",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Montana",
             correct: false
         },
     
@@ -1224,15 +1224,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Montana",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Maryland",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Maine",
             correct: false
         },
     
@@ -1247,15 +1247,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Maine",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Kentucky",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Kansas",
             correct: false
         },
     
@@ -1269,15 +1269,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Iowa",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Indiana",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Illinois",
             correct: false
         },
     
@@ -1291,15 +1291,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Illinois",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Mississippi",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Nebraska",
             correct: false
         },
     
@@ -1313,11 +1313,11 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Nebraska",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Louisiana",
             correct: false
         },
         {
@@ -1335,15 +1335,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Louisiana",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Indiana",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Georgia",
             correct: false
         },
     
@@ -1357,15 +1357,15 @@ const questions = [
             correct: true
         },
         {
-            text: "Florida",
+            text: "Georgia",
             correct: false
         },
         {
-            text: "Colorado",
+            text: "Idaho",
             correct: false
         },
         {
-            text: "Connecticut",
+            text: "Michigan",
             correct: false
         },
     

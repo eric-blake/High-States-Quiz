@@ -62,7 +62,7 @@ body {
     max-width: 600px;
     display: block;
     margin:auto;
-    border-radius: 10px;;
+    border-radius: 15px;;
 }
 
 /* Username section */
@@ -71,7 +71,7 @@ body {
     flex-direction: column;
     width:600px;
     border: 2px solid;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     padding:15px 75px;
     gap:15px;
@@ -89,7 +89,7 @@ body {
     gap:15px;
     border: 2px solid;
     padding:15px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin:auto;
     text-align: center;
    
@@ -106,7 +106,7 @@ body {
 
 #username {
     height:3vh;
-    border-radius:10px;
+    border-radius:15px;
     font-size: 16px;
     padding-left: 10px;
     }
@@ -129,7 +129,7 @@ body {
     gap:15px;
     border: 2px solid;
     padding:15px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin:auto;
     padding: 15px 30px;
     line-height: 1.75em;
@@ -207,12 +207,12 @@ text-align: center;
 
 #alert-btn:hover {
     color:white;
-    background-color: #002868;
+    background-color: #6987C9;
 }
 
 #rules-ok-btn:hover {
     color:white;
-    background-color: #002868;
+    background-color: #6987C9;
 }
 
 /* Main quiz section */

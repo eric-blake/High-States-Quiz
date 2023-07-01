@@ -153,15 +153,32 @@ text-align: center;
     color:white;
     padding:5px 15px;
     border-radius: 10px;
-    border-color: blue;
+    border-color: #6987C9;
     margin:15px;
     width:125px;
 }
 
 .play-btn:hover {
     background-color:white;
-    color:navy
+    color:#002868
 }
+
+.play-again-btn {
+    font-size: 150%;
+    font-weight:600;
+    background-color: #002868;
+    color:white;
+    padding:5px 15px;
+    border-radius: 10px;
+    border-color: #6987C9;
+    width:auto;
+}
+
+.play-again-btn:hover {
+    background-color:white;
+    color:#002868
+}
+
 
 #next-btn {
     font-size: 150%;
@@ -170,7 +187,7 @@ text-align: center;
     color:#002868;
     padding:15px 30px;
     border-radius: 10px;
-    border-color: blue;
+    border-color: #6987C9;
 }
 
 #next-btn:hover {
@@ -186,7 +203,7 @@ text-align: center;
 .btn {
     font-size: 24px;
     font-weight: 700;
-    color: blue;
+    color: #6987C9;
 }
 
 #next {
@@ -353,9 +370,9 @@ Correct and incorrect answers */
     align-items: center;
     gap:20px;
     border: 1px solid;
-    border-radius: 10px;
+    border-radius: 15px;
     padding:20px;
-    max-width:600px;
+    width:600px;
     margin:auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   
@@ -433,13 +450,13 @@ Correct and incorrect answers */
    width: 85vw;
 }
 
-#gameover-modal-container {
-    Margin: 15px;
+#modal {
+    width: 85vw;
    
 }
 
 #rules-modal >ol {
-    padding:0 10px
+    padding:0 15px
   }
 
   #rules-modal li {

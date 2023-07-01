@@ -34,12 +34,25 @@ The high states game is a quiz based game that tests the users knowledge of the 
 ### The welcome page:
 * The landing page includes a header and photograph to allow the user to see the name of the quiz.
 * This section gives the user the instructions for the quiz
+
 <img src="assets/documentation/high-states-quiz-welcome.PNG" alt="Screenshot of welcome page">
 
-### Enter username section:
-* The user must enter their username before stating the quiz.
-* The username must be at least two characters long or a username alert will be displayed.
+### Rules of the quiz:
+* The user clicks on rules button to see instructions for playing the quiz.
+
+<img src="assets/documentation/high-states-quiz-rules.PNG" alt="Screenshot of rules of the quiz modal">
+
+### Entering username:
+* The user must enter a valid username before starting the quiz. 
+
 <img src="assets/documentation/high-states-quiz-username.PNG" alt="Screenshot of username entry field">
+
+
+* The username must be at least two characters long or a username alert message will be displayed.
+* The user acknowledges the alert message and is returned to the home screen.
+
+<img src="assets/documentation/high-states-quiz-username-alert-message.PNG" alt="Screenshot of username alert message">
+
 
 ### Questions and answers box:
 * This section will show the question and four possible answers.

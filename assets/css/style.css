@@ -62,6 +62,7 @@ body {
     max-width: 600px;
     display: block;
     margin:auto;
+    border-radius: 10px;;
 }
 
 /* Username section */
@@ -121,7 +122,7 @@ body {
     flex-direction: column;
     background-color:#002868;
     color:white;
-    width:400px;
+    width:600px;;
     height:350px;
     gap:15px;
     border: 2px solid;
@@ -129,11 +130,11 @@ body {
     border-radius: 10px;
     margin:auto;
     padding: 15px 30px;
-    line-height: 1.5em;
+    line-height: 1.75em;
     align-items: center;
 }
 
-#rules-modal > li{
+#rules-modal li {
     font-size: 120%;
 }
 
@@ -150,6 +151,8 @@ text-align: center;
     padding:5px 15px;
     border-radius: 10px;
     border-color: blue;
+    margin:15px;
+    width:125px;
 }
 
 .play-btn:hover {
@@ -246,7 +249,7 @@ text-align: center;
     color: white;
     background-color: #002868;
     border: solid 3px;
-   border-color: blue;
+    border-color: blue;
   
 }
 /* 

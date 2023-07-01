@@ -15,7 +15,7 @@ const questionElement = document.getElementById('question');
 const usernameAlertContainer=document.getElementById('username-alert-container');
 const usernameContainer =document.getElementById('username-container');
 const rulesContainer =document.getElementById('rules-modal-container');
-const welcomeMessage =document.getElementById('welcome-message')
+const welcomeMessage =document.getElementById('welcome-message');
 //Scores variables
 const scoreBoardContainer = document.getElementById('scoreboard-container');
 const score = document.getElementById('score');
@@ -62,7 +62,7 @@ nextButton.addEventListener('click' ,() => {
 function rules (){
     welcomeMessage.style.display = "none";
     usernameContainer.style.display = "none";
-    rulesContainer.classList.remove('hide')
+    rulesContainer.classList.remove('hide');
 }
 
 
@@ -221,7 +221,7 @@ function updateIncorrectScore () {
  /**countdown timer*/
  function countDowntimer () {
        // timerContainer.classList.remove('hide')
-        let currentTime=2;
+        let currentTime=90;
         quizTimer =setInterval(function () {
             currentTime--;
 

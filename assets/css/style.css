@@ -85,12 +85,13 @@ body {
     align-items: center;
     color:white;
     width:400px;
-    height:125px;
+    height:auto;
     gap:15px;
     border: 2px solid;
     padding:15px;
     border-radius: 10px;
     margin:auto;
+    text-align: center;
    
 }
 
@@ -115,6 +116,7 @@ body {
 
 #rules-modal-container {
     margin-top: 30px;
+    
 }
 
 #rules-modal {
@@ -123,7 +125,7 @@ body {
     background-color:#002868;
     color:white;
     width:600px;;
-    height:350px;
+    height:auto;
     gap:15px;
     border: 2px solid;
     padding:15px;
@@ -132,6 +134,7 @@ body {
     padding: 15px 30px;
     line-height: 1.75em;
     align-items: center;
+    
 }
 
 #rules-modal li {
@@ -366,6 +369,10 @@ Correct and incorrect answers */
 
   }
 
+  #rules-modal > ol {
+    padding:10px
+  }
+
   /* Footer  - social nedia links */
 
   footer {
@@ -406,8 +413,8 @@ Correct and incorrect answers */
     width:85vw;
   } 
 
-  #username-container {
-    width:75vw;
+  #username-container, #rules-modal, #username-alert{
+    width:85vw;
     padding:15px;
     
   }
@@ -430,4 +437,12 @@ Correct and incorrect answers */
     Margin: 15px;
    
 }
+
+#rules-modal >ol {
+    padding:0 10px
   }
+
+  #rules-modal li {
+    font-size: 100%;
+}
+}

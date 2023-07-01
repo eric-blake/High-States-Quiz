@@ -7,12 +7,14 @@ const answerButtonsElement = document.getElementById('answer-buttons');
 const playAgainButton =document.getElementById('play-again-btn');
 const alertButton = document.getElementById('alert-btn');
 const rulesButton =document.getElementById('rules-btn');
+const rulesOkButton =document.getElementById('rules-ok-btn');
 //Container variables
 const welcomeContainer = document.getElementById('welcome-container');
 const questionContainer = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const usernameAlertContainer=document.getElementById('username-alert-container');
 const usernameContainer =document.getElementById('username-container');
+const rulesContainer =document.getElementById('rules-modal-container');
 //Scores variables
 const scoreBoardContainer = document.getElementById('scoreboard-container');
 const score = document.getElementById('score');
@@ -36,6 +38,8 @@ let quizTimer;
 playButton.addEventListener('click', checkUsername);
 playAgainButton.addEventListener('click',playQuiz);
 alertButton.addEventListener('click', resetPage);
+rulesButton.addEventListener('click', rules);
+rulesOkButton.addEventListener('click',resetPage);
 
 document.getElementById('username').addEventListener('keydown', function(event) {
     if(event.key ==='Enter') {
@@ -52,6 +56,14 @@ nextButton.addEventListener('click' ,() => {
 
 //Functions
 
+
+/**Rules of the quiz*/
+function rules (){
+    usernameContainer.style.display = "none";
+    rulesContainer.classList.remove('hide')
+}
+
+
 /**Checks that username entered is valid*/
 function checkUsername () {
     //usernameContainer.style.display = "flex";
@@ -66,7 +78,6 @@ else {
 }
 /**Alerts user if no username is entered or username is invalid*/
 function usernameAlert() {
-     //welcomeMessage.style.display = "none";
      usernameContainer.style.display = "none";
      usernameAlertContainer.classList.remove('hide');
 }
@@ -74,6 +85,7 @@ function usernameAlert() {
 function resetPage () {
     usernameAlertContainer.classList.add('hide');
     usernameContainer.style.display = "flex";
+    rulesContainer.classList.add('hide')
 }
 
 

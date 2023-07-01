@@ -121,7 +121,7 @@ Add users score to a top scores table
 | User can keep clicking on correct answer and increment the score | Add disable button once answer button is selected |
 | Game over function called immediately on selecting answer for last question, preventing user from seeing if their answer was correct  | Add timeout to allow the final answer selected to be seen before calling modal  |
 | Only answers for first question were being shuffled | Moved shuffle answer sort method to correct function|
-| Footer was not at bottom of page in quiz page | Updated position property in CSS |
+| Footer was not staying at bottom of page in quiz page | Updated position property in CSS |
 
 * ### Unfixed Bugs
 No unfixed bugs
@@ -158,7 +158,7 @@ By forking the repository, you can make a copy of the repository and make change
  * Instructions throughout project was taken from [Code Institute](https://codeinstitute.net/ie/ "Code Institute") Tutorials and Love Maths project.
  * The wireframe was created using [Mockflow](https://mockflow.com/ "Mockflow").
  * The Favicon was taken from [Icons8](https://icons8.com/ "Icons8").
- * Get Question and show questions and answers concept from Youtube tutorial [Youtube](https://www.youtube.com/watch?v=riDzcEQbX6k "Youtube")
+ * Get question and show questions and answers concept from Youtube tutorial [Youtube](https://www.youtube.com/watch?v=riDzcEQbX6k "Youtube")
  * Countdown timer concept from Youtube tutorial [Youtube](https://www.youtube.com/watch?v=GhePFBkdNYk  "Youtube")
  * How to flash buttons concept from stack overflow [Stack overflow](https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3  "Stack overflow")
  * List of nicknames of U.S. states [Britannica](https://www.britannica.com/topic/list-of-nicknames-of-U-S-States-2130544 "Britannica")

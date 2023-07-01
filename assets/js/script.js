@@ -6,6 +6,7 @@ const nextButton =document.getElementById('next-btn');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const playAgainButton =document.getElementById('play-again-btn');
 const alertButton = document.getElementById('alert-btn');
+const rulesButton =document.getElementById('rules-btn');
 //Container variables
 const welcomeContainer = document.getElementById('welcome-container');
 const questionContainer = document.getElementById('question-container');

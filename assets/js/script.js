@@ -77,7 +77,7 @@ function resetPage () {
 
 
 /**
- * Play quiz function starts the quiz after the play button is pressed. It removes the play button and add the questions and answer section
+ * Play quiz function starts the quiz after the play button is pressed. It removes the play button and displays the questions and answer section
  */
 function playQuiz() {
     usernameContainer.style.display = "none";
@@ -86,7 +86,6 @@ function playQuiz() {
     questionContainer.classList.remove('hide');
     scoreBoardContainer.classList.remove('hide-scoreboard');
     timerContainer.classList.remove('hide-timer');
-   //shuffledQuestions=questions[Math.floor(Math.random()*questions.length)];
     shuffledQuestions=questions.sort(() => Math.random() - 0.5) ; // gets a randow question
     currentQuestionIndex = 0; //set to 0 as we are starting on first question
     getQuestion();
@@ -152,7 +151,7 @@ function selectAnswer(e) {
     //set the status for all four buttons
     Array.from(answerButtonsElement.children).forEach(button => {
         setAnswerStatus(button,button.dataset.correct);
-        button.disabled=true; // diables answer button to prevent user from incremeting the score by keeping selecting the correct answer    
+        button.disabled=true; // diables answer button to prevent user from incremeting the score by selecting the correct answer multiple times
     });
     if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
         nextButton.classList.remove('hide');
@@ -164,7 +163,7 @@ function selectAnswer(e) {
     }
 
 
-//Color code correct and incorrect answers
+/**Color code correct and incorrect answers**/
 function setAnswerStatus (element, correct) {
     clearAnswerStatus (element);
     if (correct) {
@@ -174,13 +173,12 @@ function setAnswerStatus (element, correct) {
         
     }
     else {
-        //element.classList.add('blink')
-        //not needed as slecetded button is set to wrong as default, and changed to correct if it is correct
+            //not needed as selected button is set to incorrect as default, and changed to correct if it is correct
    
  }
     }
 
-
+/**Clears the answer status after each question**/
 function clearAnswerStatus (element)  {
     element.classList.remove('correct');
     element.classList.remove('wrong');
@@ -225,7 +223,7 @@ function updateIncorrectScore () {
  
     
         
-  /**Gameover*/   
+  /**Hides question container and displays game over modal*/   
  function gameOver () {
     questionContainer.classList.add('hide');
     gameOverModal.classList.remove('hide');
@@ -251,7 +249,7 @@ else {
 
 
 
-// Questions and answers
+// Lits of 50 questions with four answers per question
 
 const questions = [
     {

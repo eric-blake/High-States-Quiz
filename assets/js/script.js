@@ -15,6 +15,7 @@ const questionElement = document.getElementById('question');
 const usernameAlertContainer=document.getElementById('username-alert-container');
 const usernameContainer =document.getElementById('username-container');
 const rulesContainer =document.getElementById('rules-modal-container');
+const welcomeMessage =document.getElementById('welcome-message')
 //Scores variables
 const scoreBoardContainer = document.getElementById('scoreboard-container');
 const score = document.getElementById('score');
@@ -59,6 +60,7 @@ nextButton.addEventListener('click' ,() => {
 
 /**Rules of the quiz*/
 function rules (){
+    welcomeMessage.style.display = "none";
     usernameContainer.style.display = "none";
     rulesContainer.classList.remove('hide')
 }
@@ -85,7 +87,8 @@ function usernameAlert() {
 function resetPage () {
     usernameAlertContainer.classList.add('hide');
     usernameContainer.style.display = "flex";
-    rulesContainer.classList.add('hide')
+    rulesContainer.classList.add('hide');
+    welcomeMessage.style.display = "block";
 }
 
 

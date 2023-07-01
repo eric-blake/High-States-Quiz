@@ -110,6 +110,35 @@ body {
     }
 
 
+/* Rules modal */
+
+#rules-modal-container {
+    margin-top: 30px;
+}
+
+#rules-modal {
+    display:flex;
+    flex-direction: column;
+    background-color:#002868;
+    color:white;
+    width:400px;
+    height:300px;
+    gap:15px;
+    border: 2px solid;
+    padding:15px;
+    border-radius: 10px;
+    margin:auto;
+    padding: 15px 30px;
+}
+
+#rules-modal > li{
+    font-size: 120%;
+}
+
+#rules-modal > h2{
+text-align: center;
+}
+
 /* buttons */
 .play-btn {
     font-size: 150%;
@@ -157,7 +186,7 @@ body {
    
 }
 
-#alert-btn {
+#alert-btn, #rules-ok-btn {
     font-size: 150%;
     font-weight:600;
     background-color: white;

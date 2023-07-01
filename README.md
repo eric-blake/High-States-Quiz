@@ -2,7 +2,7 @@
 
 <img src="assets/documentation/high-states-quiz-mockup.PNG" alt="Screenshot from http://ami.responsivedesign.is/ website, that show how the website looks on commons screen sizes">
 
-The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many questions as possible in 60 seconds. At the end of the game the user is presented with their final score. 
+The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many questions as possible in 90 seconds. At the end of the game the user is presented with their final score. 
 
 -By Eric Blake
 
@@ -24,6 +24,8 @@ The high states game is a quiz based game that tests the users knowledge of the 
 ### Wireframe
 * The wireframe was created using Mockflow.
  <img src="assets/documentation/high-states-quiz-wireframe-home-page.PNG" alt="Screenshot of Wireframe home page">
+  <img src="assets/documentation/high-states-quiz-wireframe-rules.PNG" alt="Screenshot of Wireframe rules modal">
+ <img src="assets/documentation/high-states-quiz-wireframe-invalid-username.PNG" alt="Screenshot of Wireframe invalid username warning message">
  <img src="assets/documentation/high-states-quiz-wireframe-quiz-page.PNG" alt="Screenshot of Wireframe quiz page">
  <img src="assets/documentation/high-states-quiz-wireframe-game-over.PNG" alt="Screenshot of Wireframe game over modal">
 
@@ -57,11 +59,11 @@ The high states game is a quiz based game that tests the users knowledge of the 
 
 ### Countdown timer:
 * The countdown timer starts when the user clicks on play quiz. The first question is presented to the user
-* The timer counts down from 60 seconds, and after 60 seconds the Game-over function is called.
+* The timer counts down from 60 seconds, and after 90 seconds the Game-over function is called.
 <img src="assets/documentation/high-states-quiz-timer.PNG" alt="Screenshot of countdown timer">
 
 ### Game over modal:
-* After 60 seconds has elapsed, the game is over and the user will be presented with their final score
+* After 90 seconds has elapsed, the game is over and the user will be presented with their final score
 <img src="assets/documentation/high-states-quiz-game-over.PNG" alt="Screenshot of gameover message">
 
 
@@ -85,7 +87,7 @@ Add users score to a top scores table
 | If no username or invalid username is entered an invalid username message is displayed   |Pass  | 
 | When valid username is entered and play button selected the quiz begins  |Pass  |
 | When quiz begins a question and four answers are displayed   |Pass   | 
-| When quiz begins the countdown timer starts counting down from 60 seconds  |Pass   | 
+| When quiz begins the countdown timer starts counting down from 90 seconds  |Pass   | 
 | When user selects answer it will flash green if correct and turn red if incorrect | Pass  | 
 | When user selects answer it will turn red if incorrect and correct answer will flash green  | Pass  | 
 | The scoreboard displays the number of correct and incorrect answers  | Pass  | 

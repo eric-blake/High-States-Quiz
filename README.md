@@ -112,10 +112,10 @@ Add users score to a top scores table
 ### Validator Testing:
 * HTML
     * No errors were returned when passing through the official W3C validator. 
-    <img src="assets/documentation/w3c-html-validator.PNG" alt="Screenshot of W3C HTML Validator results">
+    <img src="assets/documentation/high-states-quiz-w3c-html-validator.PNG" alt="Screenshot of W3C HTML Validator results">
 * CSS
     * No errors were found when passing through the official (Jigsaw) validator.
-    <img src="assets/documentation/w3c-css-validator.PNG" alt="Screenshot of W3C CSS Validator results">
+    <img src="assets/documentation/high-states-quiz-w3c-css-validator.PNG" alt="Screenshot of W3C CSS Validator results">
 * Javascript
   * No errors were returned when passing through JS Hint checker.
     <img src="assets/documentation/high-states-quiz-jshint.PNG" alt="Screenshot of JSHint results">

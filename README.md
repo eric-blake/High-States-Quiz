@@ -2,7 +2,7 @@
 
 <img src="assets/documentation/high-states-quiz-mockup.PNG" alt="Screenshot from http://ami.responsivedesign.is/ website, that show how the website looks on commons screen sizes">
 
-The high states game is a quiz based game that tests the users knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user has to answer as many questions as possible in 90 seconds. At the end of the game the user is presented with their final score. 
+The high states game is a quiz-based game that tests the user's knowledge of the nicknames of the states of the United States of America. The user enters their username and then clicks on play game. The user must answer as many questions as possible in 90 seconds. At the end of the game the user is presented with their final score. 
 
 -By Eric Blake
 
@@ -18,13 +18,13 @@ The high states game is a quiz based game that tests the users knowledge of the 
 * The font used throughout is Karla.
 
 ### Images
-* The image used on the main page is for decorative purposed only, and is from pexels.com.
+* The image used on the main page is for decorative purposed only. The image is from pexels.com.
 
 
 ### Wireframe
 * The wireframe was created using Mockflow.
  <img src="assets/documentation/high-states-quiz-wireframe-home-page.PNG" alt="Screenshot of Wireframe home page">
-  <img src="assets/documentation/high-states-quiz-wireframe-rules.PNG" alt="Screenshot of Wireframe rules modal">
+ <img src="assets/documentation/high-states-quiz-wireframe-rules.PNG" alt="Screenshot of Wireframe rules modal">
  <img src="assets/documentation/high-states-quiz-wireframe-invalid-username.PNG" alt="Screenshot of Wireframe invalid username warning message">
  <img src="assets/documentation/high-states-quiz-wireframe-quiz-page.PNG" alt="Screenshot of Wireframe quiz page">
  <img src="assets/documentation/high-states-quiz-wireframe-game-over.PNG" alt="Screenshot of Wireframe game over modal">
@@ -33,7 +33,7 @@ The high states game is a quiz based game that tests the users knowledge of the 
 
 ### The welcome page:
 * The landing page includes a header and photograph to allow the user to see the name of the quiz.
-* This section gives the user the instructions for the quiz
+* This section gives the user the instructions for the quiz.
 
 <img src="assets/documentation/high-states-quiz-welcome.PNG" alt="Screenshot of welcome page">
 
@@ -56,14 +56,15 @@ The high states game is a quiz based game that tests the users knowledge of the 
 
 ### Questions and answers box:
 * This section will show the question and four possible answers.
+
 <img src="assets/documentation/high-states-quiz-questions-and-answers.PNG" alt="Screenshot of questions and answers box">
 
 ### Correct answer selected:
-* If the correct answer is selected the button will flash green three times and then remain green
+* If the correct answer is selected the button will flash green three times and then remain green.
 <img src="assets/documentation/high-states-quiz-correct-answer.PNG" alt="Screenshot of Correct answer selected:">
 
 ### Incorrect answer selected:
-* If the incorrect answer is selected the button will turn red and the correct answer will flash green three times
+* If the incorrect answer is selected the button will turn red and the correct answer will flash green three times.
 <img src="assets/documentation/high-states-quiz-incorrect-answer.PNG" alt="Screenshot of incorrect answer selected">
 
 ### Scoreboard:
@@ -72,11 +73,13 @@ The high states game is a quiz based game that tests the users knowledge of the 
 
 ### Countdown timer:
 * The countdown timer starts when the user clicks on play quiz. The first question is presented to the user
-* The timer counts down from 60 seconds, and after 90 seconds the Game-over function is called.
+* The timer counts down from 90 seconds.
 <img src="assets/documentation/high-states-quiz-timer.PNG" alt="Screenshot of countdown timer">
 
 ### Game over modal:
-* After 90 seconds has elapsed, the game is over and the user will be presented with their final score
+* After 90 seconds has elapsed, the game is over, and the user will be presented with a message and their final score.
+* If the user answers eight or more questions correctly the message will be "Congratulations"
+* If the user answers less than eight questions correctly the message will be "Hard luck"
 <img src="assets/documentation/high-states-quiz-game-over.PNG" alt="Screenshot of gameover message">
 
 

@@ -473,14 +473,14 @@ footer {
         padding: 15px;
 
     }
-    
+
     #timer {
         padding-bottom: 15px;
     }
 
-   #scoreboard {
-    flex-wrap:wrap;
-    padding:10px;
-   }
+    #scoreboard {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
 
 }

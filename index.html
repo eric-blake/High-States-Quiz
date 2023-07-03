@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,121 +15,121 @@
 
 <body>
 
- <!-- Header and logo -->
-<header>
-    <a href="index.html">
-        <h1 id="logo"> <i class="fa-solid fa-flag-usa"></i> High States Quiz</h1>
-    </a>
-</header>
-
-
-
-<!-- Main image and welcome message-->
-<div id ="welcome-container">
-
-    <div id="quiz-image">
-     <img src="assets/images/us-flag.jpg" alt="Flag of united States of America"> 
-    </div>
-    
-    <div id="welcome-message">
-      <h2>Welcome to the High States Quiz</h2> 
-      <p> How well do you know the US states? </p>
-      <p> Click play to find out</p> 
-    </div>
-   </div>
-
-<!-- username form -->
-<div id="username-container">
-    <label id ="enter-name" for="username" aria-label="enter your username">Enter your username</label>
-    <input type ="text" id="username" name="username">
-
-<!-- Play button -->
-<div id="play">
-<button id="play-btn" class="play-btn">Play</button>
-<button id="rules-btn" class="play-btn">Rules</button>
-</div>
-</div>
-
-<!-- username alert container -->
-<div id="username-alert-container" class="hide" >
-    <div id="username-alert" >
-        <p>Please enter valid username</p>
-<button id="alert-btn">Ok</button>
-</div>
-</div>
-
-
-<!-- Rules modal -->
-<div id="rules-modal-container"  class="hide" >
-    <div id="rules-modal" >
-      <h2>Rules of the Quiz</h2>
-
-      <ol>
-        <li>To play the quiz you must enter a username with two or more characters.</li>
-        <li>There are 50 questions in the quiz.</li>
-        <li>You have 90 seconds to answer as many questions as possible.</li>
-        <li>You final score will be displayed at the end of the game.</li>
-        <li>Have fun!</li>
-      </ol>
-
-      <button id="rules-ok-btn">Ok</button>
-    </div>
-  </div>
-
-
-<!-- Scoreboard and timer -->
-<div id="scoreboard-container" class ="hide-scoreboard" >
-
-    <div id="scoreboard" >
-             <p class ='scores'>Correct-Answers <span id="score">0</span></p>
-             <p class ='scores'>Incorrect-Answers <span id="incorrect">0</span></p>  
-           
-      </div>
-    </div>
-
-    <div id="timer-container" class ="hide-timer" >
-
-    <div id="timer" >
-        <p id="time">90</p>
-    </div>
-
-   </div>
-
- <!-- Question and answers-->
-<div id="question-container" class="hide">
-      <h2 id="question" >Question</h2>
-
-      <div id="answer-buttons" >
-          <button class="answer-btn btn" id="answer-btn-1">Answer 1</button>
-          <button class="answer-btn btn"  id="answer-btn-2">Answer 2</button> 
-          <button class="answer-btn btn"  id="answer-btn-3">Answer 3</button> 
-          <button class="answer-btn btn"  id="answer-btn-4">Answer 4</button>
-         
-      </div>
-
-<!-- Next button -->
-      <div id="next">
-        <button class="btn" id="next-btn">Next</button>
-      </div>
-
-    </div>
-
-
-<!-- Game over modal -->
-    <div id="gameover-modal-container"  class="hide" >
-      <div id="modal" >
-        <h2>Game over</h2>
-        <p id="final-score-name">0</p>
-        <p id="final-score">0</p>
-        <button class="hide play-again-btn" id="play-again-btn">Play again</button>
+    <!-- Header and logo -->
+    <header>
         <a href="index.html">
-            <i class="fa-solid fa-house play-again-btn"></i>
+            <h1 id="logo"> <i class="fa-solid fa-flag-usa"></i> High States Quiz</h1>
         </a>
-      </div>
+    </header>
+
+
+
+    <!-- Main image and welcome message-->
+    <div id="welcome-container">
+
+        <div id="quiz-image">
+            <img src="assets/images/us-flag.jpg" alt="Flag of united States of America">
+        </div>
+
+        <div id="welcome-message">
+            <h2>Welcome to the High States Quiz</h2>
+            <p> How well do you know the US states? </p>
+            <p> Click play to find out</p>
+        </div>
+    </div>
+
+    <!-- username form -->
+    <div id="username-container">
+        <label id="enter-name" for="username" aria-label="enter your username">Enter your username</label>
+        <input type="text" id="username" name="username">
+
+        <!-- Play button -->
+        <div id="play">
+            <button id="play-btn" class="play-btn">Play</button>
+            <button id="rules-btn" class="play-btn">Rules</button>
+        </div>
+    </div>
+
+    <!-- username alert container -->
+    <div id="username-alert-container" class="hide">
+        <div id="username-alert">
+            <p>Please enter valid username</p>
+            <button id="alert-btn">Ok</button>
+        </div>
     </div>
 
 
-  <!-- Footer - social media links" -->  
+    <!-- Rules modal -->
+    <div id="rules-modal-container" class="hide">
+        <div id="rules-modal">
+            <h2>Rules of the Quiz</h2>
+
+            <ol>
+                <li>To play the quiz you must enter a username with two or more characters.</li>
+                <li>There are 50 questions in the quiz.</li>
+                <li>You have 90 seconds to answer as many questions as possible.</li>
+                <li>You final score will be displayed at the end of the game.</li>
+                <li>Have fun!</li>
+            </ol>
+
+            <button id="rules-ok-btn">Ok</button>
+        </div>
+    </div>
+
+
+    <!-- Scoreboard and timer -->
+    <div id="scoreboard-container" class="hide-scoreboard">
+
+        <div id="scoreboard">
+            <p class='scores'>Correct-Answers <span id="score">0</span></p>
+            <p class='scores'>Incorrect-Answers <span id="incorrect">0</span></p>
+
+        </div>
+    </div>
+
+    <div id="timer-container" class="hide-timer">
+
+        <div id="timer">
+            <p id="time">90</p>
+        </div>
+
+    </div>
+
+    <!-- Question and answers-->
+    <div id="question-container" class="hide">
+        <h2 id="question">Question</h2>
+
+        <div id="answer-buttons">
+            <button class="answer-btn btn" id="answer-btn-1">Answer 1</button>
+            <button class="answer-btn btn" id="answer-btn-2">Answer 2</button>
+            <button class="answer-btn btn" id="answer-btn-3">Answer 3</button>
+            <button class="answer-btn btn" id="answer-btn-4">Answer 4</button>
+
+        </div>
+
+        <!-- Next button -->
+        <div id="next">
+            <button class="btn" id="next-btn">Next</button>
+        </div>
+
+    </div>
+
+
+    <!-- Game over modal -->
+    <div id="gameover-modal-container" class="hide">
+        <div id="modal">
+            <h2>Game over</h2>
+            <p id="final-score-name">0</p>
+            <p id="final-score">0</p>
+            <button class="hide play-again-btn" id="play-again-btn">Play again</button>
+            <a href="index.html">
+                <i class="fa-solid fa-house play-again-btn"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Footer - social media links" -->
     <footer>
 
         <ul class="social-media">
@@ -151,13 +152,14 @@
 
     </footer>
 
-    
-<!-- Javascript script -->
-<script defer src="assets/js/script.js"></script>
 
-<!-- Font Awesome script -->
-<script src="https://kit.fontawesome.com/a2f0177c6e.js" crossorigin="anonymous"></script>
+    <!-- Javascript script -->
+    <script defer src="assets/js/script.js"></script>
+
+    <!-- Font Awesome script -->
+    <script src="https://kit.fontawesome.com/a2f0177c6e.js" crossorigin="anonymous"></script>
 
 
 </body>
+
 </html>

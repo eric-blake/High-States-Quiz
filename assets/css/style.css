@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
 
@@ -9,23 +8,24 @@
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
-  
+
 
 }
+
 body {
     font-family: karla;
     font-weight: 300;
     background-color: #cfd4d8;
     display: flex;
     flex-direction: column;
-    height:100vh
+    height: 100vh
 }
 
 /* Logo */
 #logo {
     text-align: center;
-    margin:30px 0;
-    color:#002868;
+    margin: 30px 0;
+    color: #002868;
 
 }
 
@@ -35,166 +35,168 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:10px;
+    gap: 10px;
 }
 
 #welcome-message {
     text-align: center;
-    width:650px;
+    width: 650px;
     display: block;
-    margin:auto;
-    padding:15px 0;
+    margin: auto;
+    padding: 15px 0;
 }
 
 #welcome-message h2 {
-    padding:10px
+    padding: 10px
 }
 
-#welcome-message  p {
-   font-size: 120%;
-    padding:10px
+#welcome-message p {
+    font-size: 120%;
+    padding: 10px
 }
 
 
-#quiz-image img  {
-    height:auto;
+#quiz-image img {
+    height: auto;
     max-width: 600px;
     display: block;
-    margin:auto;
-    border-radius: 15px;;
+    margin: auto;
+    border-radius: 15px;
+    ;
 }
 
 /* Username section */
- #username-container {
-    display:flex;
+#username-container {
+    display: flex;
     flex-direction: column;
-    width:600px;
+    width: 600px;
     border: 2px solid;
     border-radius: 15px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    padding:15px 75px;
-    gap:15px;
-    margin:auto;
- }
-
-#username-alert {
-    display:flex;
-    flex-direction: column;
-    background-color:#002868;
-    align-items: center;
-    color:white;
-    width:400px;
-    height:auto;
-    gap:15px;
-    border: 2px solid;
-    padding:15px;
-    border-radius: 15px;
-    margin:auto;
-    text-align: center;
-   
+    padding: 15px 75px;
+    gap: 15px;
+    margin: auto;
 }
 
-#username-alert > p{
+#username-alert {
+    display: flex;
+    flex-direction: column;
+    background-color: #002868;
+    align-items: center;
+    color: white;
+    width: 400px;
+    height: auto;
+    gap: 15px;
+    border: 2px solid;
+    padding: 15px;
+    border-radius: 15px;
+    margin: auto;
+    text-align: center;
+
+}
+
+#username-alert>p {
     font-size: 150%;
 }
 
 #enter-name {
     font-size: 150%;
-     text-align: center;
-    }
+    text-align: center;
+}
 
 #username {
-    height:3vh;
-    border-radius:15px;
+    height: 3vh;
+    border-radius: 15px;
     font-size: 16px;
     padding-left: 10px;
-    }
+}
 
 
 /* Rules modal */
 #rules-modal-container {
     margin-top: 30px;
-    
+
 }
 
 #rules-modal {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    background-color:#002868;
-    color:white;
-    width:600px;;
-    height:auto;
-    gap:15px;
+    background-color: #002868;
+    color: white;
+    width: 600px;
+    ;
+    height: auto;
+    gap: 15px;
     border: 2px solid;
-    padding:15px;
+    padding: 15px;
     border-radius: 15px;
-    margin:auto;
+    margin: auto;
     padding: 15px 30px;
     line-height: 1.75em;
     align-items: center;
-    
+
 }
 
 #rules-modal li {
     font-size: 120%;
 }
 
-#rules-modal > h2{
-text-align: center;
+#rules-modal>h2 {
+    text-align: center;
 }
 
 /* buttons */
 .play-btn {
     font-size: 150%;
-    font-weight:600;
+    font-weight: 600;
     background-color: #002868;
-    color:white;
-    padding:5px 15px;
+    color: white;
+    padding: 5px 15px;
     border-radius: 10px;
     border-color: #6987C9;
-    margin:15px;
-    width:125px;
+    margin: 15px;
+    width: 125px;
 }
 
 .play-btn:hover {
-    background-color:white;
-    color:#002868
+    background-color: white;
+    color: #002868
 }
 
 .play-again-btn {
     font-size: 150%;
-    font-weight:600;
+    font-weight: 600;
     background-color: #002868;
-    color:white;
-    padding:10px 15px;
+    color: white;
+    padding: 10px 15px;
     border-radius: 10px;
     border-color: #6987C9;
-    width:auto;
+    width: auto;
 }
 
 .play-again-btn:hover {
-    background-color:white;
-    color:#002868
+    background-color: white;
+    color: #002868
 }
 
 #next-btn {
     font-size: 150%;
-    font-weight:600;
+    font-weight: 600;
     background-color: white;
-    color:#002868;
-    padding:15px 30px;
+    color: #002868;
+    padding: 15px 30px;
     border-radius: 10px;
     border-color: #6987C9;
 }
 
 #next-btn:hover {
-    background-color:#002868;
-    color:white;
+    background-color: #002868;
+    color: white;
 }
 
 #play {
     text-align: center;
-   
+
 }
 
 .btn {
@@ -205,33 +207,34 @@ text-align: center;
 
 #next {
     text-align: center;
-   
+
 }
 
-#alert-btn, #rules-ok-btn {
+#alert-btn,
+#rules-ok-btn {
     font-size: 150%;
-    font-weight:600;
+    font-weight: 600;
     background-color: white;
-    color:#002868;
-    padding:5px 15px;
+    color: #002868;
+    padding: 5px 15px;
     border-radius: 10px;
-    width:125px;
+    width: 125px;
     align-items: center;
 }
 
 #alert-btn:hover {
-    color:white;
+    color: white;
     background-color: #6987C9;
 }
 
 #rules-ok-btn:hover {
-    color:white;
+    color: white;
     background-color: #6987C9;
 }
 
 /* Main quiz section */
 
-/* * Question */ 
+/* * Question */
 #question {
     text-align: center;
     padding: 15px 0;
@@ -241,22 +244,22 @@ text-align: center;
     background-color: #002868;
     border: solid 3px;
     border-color: blue;
-    width:580px;
+    width: 580px;
     justify-content: center;
 }
 
 /* Answers */
 #answer-buttons {
-    display:grid;
+    display: grid;
     justify-content: center;
     grid-template-columns: 300px 300px;
     grid-template-rows: 100px 100px;
     border-width: 3px;
-    
+
 }
 
 .answer-btn:hover {
-    border-color:orange;
+    border-color: orange;
     border-width: 5px;
 }
 
@@ -267,7 +270,7 @@ text-align: center;
     background-color: #002868;
     border: solid 3px;
     border-color: blue;
-  
+
 }
 
 /* Correct and incorrect answers */
@@ -281,13 +284,15 @@ text-align: center;
 
 
 .selected {
-    background-color:#c71110;
-   
+    background-color: #c71110;
+
 }
 
 
 /* hide buttons */
-.hide,.hide-scoreboard, .hide-timer {
+.hide,
+.hide-scoreboard,
+.hide-timer {
     display: none
 }
 
@@ -295,104 +300,106 @@ text-align: center;
 /* flash green when right answer */
 /* Concept from https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3 */
 .blink {
-    animation:  blinker 1s linear 3;  
-  }
-  
-  @keyframes blinker  {
+    animation: blinker 1s linear 3;
+}
+
+@keyframes blinker {
     50% {
-      opacity: 0;
- 
+        opacity: 0;
+
     }
-  }
+}
 
 /* Scoreboard container */
-  #scoreboard{
-    display:flex;
-    justify-content:center;
+#scoreboard {
+    display: flex;
+    justify-content: center;
     flex-direction: row;
-    gap:20px;
-    padding:30px;
-  }
+    gap: 20px;
+    padding: 30px;
+}
 
-  .scores {
-    font-size: 120%;
-  }
-
-  #score {
-    color:green;
-    font-size: 120%;
-  }
-
-#incorrect {
-    color:#c71110;
+.scores {
     font-size: 120%;
 }
 
-  #timer {
-    display:flex;
-    justify-content:center;
+#score {
+    color: green;
+    font-size: 120%;
+}
+
+#incorrect {
+    color: #c71110;
+    font-size: 120%;
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
     padding-bottom: 30px;
-    
-  }
+
+}
 
 #time {
     display: flex;
     align-items: center;
-    justify-content:center;
-    border:solid 3px;
+    justify-content: center;
+    border: solid 3px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    padding:10px;
+    padding: 10px;
     background-color: white;
-    color:#002868;
+    color: #002868;
     font-size: 24px;
-    font-weight:600;
+    font-weight: 600;
 
 }
 
-  /* game over modal */
-  #gameover-modal-container {
+/* game over modal */
+#gameover-modal-container {
     box-sizing: border-box;
     Margin: 0 auto;
-   
-    }
 
-  #modal {
+}
+
+#modal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:20px;
+    gap: 20px;
     border: 1px solid;
     border-radius: 15px;
-    padding:20px;
-    width:600px;
-    margin:auto;
+    padding: 20px;
+    width: 600px;
+    margin: auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  
-  }#modal >p{
-    font-size: 1.5rem;
-    text-align:center;
-  }
 
-  #modal >h2 {
+}
+
+#modal>p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#modal>h2 {
     font-size: 1.75rem;
 
-  }
+}
 
-  #rules-modal > ol {
-    padding:10px
-  }
+#rules-modal>ol {
+    padding: 10px
+}
 
-  /* Footer  - social nedia links */
-  footer {
+/* Footer  - social nedia links */
+footer {
     position: relative;
     bottom: 0px;
     margin-top: auto;
-   }
-  
+}
 
-  .social-media  {
+
+.social-media {
     margin-top: 25px;
     margin-bottom: 25px;
     display: flex;
@@ -401,57 +408,70 @@ text-align: center;
     justify-content: center;
     align-items: center;
     gap: 45px;
-    list-style-type:none;
-    width: 100vw;    
+    list-style-type: none;
+    width: 100vw;
 
-  }
+}
 
 .social-media i {
     font-size: 200%;
-    color:#002868;
+    color: #002868;
 
 }
+
 .social-media i:hover {
-    color:white
+    color: white
 }
 
-  /* media queries for screens 650px and down */
-  @media screen and (max-width:650px) {
+/* media queries for screens 650px and down */
+@media screen and (max-width:650px) {
 
-   #quiz-image img  {
-    width:85vw;
-  } 
+    #quiz-image img {
+        width: 85vw;
+    }
 
-  #username-container, #rules-modal, #username-alert{
-    width:85vw;
-    padding:15px;
-    
-  }
+    #username-container,
+    #rules-modal {
+        width: 85vw;
+        padding: 15px;
 
-  #welcome-message {
-    width: 85vw;
-  }
+    }
+
+    #welcome-message {
+        width: 85vw;
+    }
 
 
-  #answer-buttons {
-    grid-template-columns: 225px;
-    grid-template-rows: repeat(4,75px);
-  }
+    #answer-buttons {
+        grid-template-columns: 225px;
+        grid-template-rows: repeat(4, 75px);
+    }
 
-  #question {
-   width: 85vw;
+    #question {
+        width: 85vw;
+    }
+
+    #modal {
+        width: 85vw;
+
+    }
+
+    #rules-modal>ol {
+        padding: 0 15px
+    }
+
+    #rules-modal li {
+        font-size: 100%;
+    }
 }
 
-#modal {
-    width: 85vw;
-   
-}
+/* media queries for screens 450px and down */
+@media screen and (max-width:450px) {
 
-#rules-modal >ol {
-    padding:0 15px
-  }
+    #username-alert {
+        width: 85vw;
+        padding: 15px;
 
-  #rules-modal li {
-    font-size: 100%;
-}
+    }
+
 }

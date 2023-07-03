@@ -57,7 +57,6 @@ nextButton.addEventListener('click' ,() => {
 
 //Functions
 
-
 /**Rules of the quiz*/
 function rules (){
     welcomeMessage.style.display = "none";
@@ -65,10 +64,8 @@ function rules (){
     rulesContainer.classList.remove('hide');
 }
 
-
 /**Checks that username entered is valid*/
 function checkUsername () {
-    //usernameContainer.style.display = "flex";
     userName = document.getElementById('username').value.trim();  
 if (userName.length >=2) {
     playQuiz();
@@ -102,8 +99,10 @@ function playQuiz() {
     questionContainer.classList.remove('hide');
     scoreBoardContainer.classList.remove('hide-scoreboard');
     timerContainer.classList.remove('hide-timer');
-    shuffledQuestions=questions.sort(() => Math.random() - 0.5) ; // gets a randow question
-    currentQuestionIndex = 0; //set to 0 as we are starting on first question
+    // gets a randow question
+    shuffledQuestions=questions.sort(() => Math.random() - 0.5) ; 
+    //set to 0 as we are starting on first question
+    currentQuestionIndex = 0; 
     getQuestion();
     score.innerText=0;
     incorrect.innerText=0;
@@ -116,22 +115,20 @@ function playQuiz() {
 function getQuestion() {
     resetQuestionContainer();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-    //console.log(question, currentQuestionIndex);
-    console.log(shuffledQuestions, shuffledAnswers);
-
     
 }
 /**Shows question in question container*/
 function showQuestion(quest) {
-    questionElement.innerText=quest.quest; //renamed question to quest to make easier to read
-    //shuffle the answers and loop through the question answers, get single answer and create a button for each
+    questionElement.innerText=quest.quest; 
+    //renamed question to quest to make easier to read
     shuffledAnswers=shuffledQuestions[currentQuestionIndex].answers.sort(() => Math.random() - 0.5);  // shuffles the answers
     shuffledAnswers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText=answer.text;
         button.classList.add('answer-btn','btn');
          if (answer.correct) {
-         button.dataset.correct =answer.correct; //add data attribute to the correct button
+         //add data attribute to the correct button
+         button.dataset.correct =answer.correct; 
     
         }
         button.addEventListener('click', selectAnswer);
@@ -141,20 +138,19 @@ function showQuestion(quest) {
     
      }
     
-/*
-Removes next betton until answer is selected
-*/
+/**Removes next betton until answer is selected**/
 function resetQuestionContainer  () {
     nextButton.classList.add('hide');
-    while (answerButtonsElement.firstChild) {   //Loop through all the children for answer button elements and remove first child
+    while (answerButtonsElement.firstChild) {  
+         //Loop through all the children for answer button elements and remove first child
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
 
 }
 
-/**Selects answer question in question container*/
+/**Selects answer in question container, get the button we clicked on**/
 function selectAnswer(e) {
-    const selectedButton = e.target; //get the button we clicked on
+    const selectedButton = e.target; 
     selectedButton.classList.add('selected');
     const correct = selectedButton.dataset.correct;
     
@@ -167,12 +163,15 @@ function selectAnswer(e) {
     //set the status for all four buttons
     Array.from(answerButtonsElement.children).forEach(button => {
         setAnswerStatus(button,button.dataset.correct);
-        button.disabled=true; // diables answer button to prevent user from incremeting the score by selecting the correct answer multiple times
+        // diables answer button to prevent user from incremeting the score by selecting the correct answer multiple times
+        button.disabled=true; 
     });
-    if (shuffledQuestions.length > currentQuestionIndex + 1 ){ //check that we are not on last question
+    //check that we are not on last question
+    if (shuffledQuestions.length > currentQuestionIndex + 1 ){ 
         nextButton.classList.remove('hide');
     } else {
-        setTimeout(gameOver, 1000); // add timeout to allow the final answer selected to be seen before calling modal
+        // add timeout to allow the final answer selected to be seen before calling modal
+        setTimeout(gameOver, 1000); 
         timerContainer.classList.add('hide-timer');
     }    
    
@@ -189,7 +188,7 @@ function setAnswerStatus (element, correct) {
         
     }
     else {
-            //not needed as selected button is set to incorrect as default, and changed to correct if it is correct
+        //not needed as selected button is set to incorrect as default, and changed to correct if it is correct
    
  }
     }
@@ -215,12 +214,9 @@ function updateIncorrectScore () {
  }
 
 
-
- 
  // Concept from turorial https://www.youtube.com/watch?v=GhePFBkdNYk
  /**countdown timer*/
  function countDowntimer () {
-       // timerContainer.classList.remove('hide')
         let currentTime=90;
         quizTimer =setInterval(function () {
             currentTime--;
@@ -266,7 +262,6 @@ else {
 
 
 // Lits of 50 questions with four answers per question
-
 const questions = [
     {
         quest: 'Which state is know as "The Cotton State"',

@@ -31,7 +31,6 @@ body {
 
 
 /* Welcome message and instructions */
-
 #welcome-container {
     display: flex;
     flex-direction: column;
@@ -113,7 +112,6 @@ body {
 
 
 /* Rules modal */
-
 #rules-modal-container {
     margin-top: 30px;
     
@@ -178,7 +176,6 @@ text-align: center;
     background-color:white;
     color:#002868
 }
-
 
 #next-btn {
     font-size: 150%;
@@ -272,8 +269,8 @@ text-align: center;
     border-color: blue;
   
 }
-/* 
-Correct and incorrect answers */
+
+/* Correct and incorrect answers */
 .correct {
     background-color: green;
 }
@@ -308,8 +305,7 @@ Correct and incorrect answers */
     }
   }
 
-/* 
-  Scoreboard container */
+/* Scoreboard container */
   #scoreboard{
     display:flex;
     justify-content:center;
@@ -356,13 +352,11 @@ Correct and incorrect answers */
 }
 
   /* game over modal */
-
   #gameover-modal-container {
     box-sizing: border-box;
     Margin: 0 auto;
    
-    
-      }
+    }
 
   #modal {
     display: flex;
@@ -391,7 +385,6 @@ Correct and incorrect answers */
   }
 
   /* Footer  - social nedia links */
-
   footer {
     position: relative;
     bottom: 0px;
@@ -423,7 +416,6 @@ Correct and incorrect answers */
 }
 
   /* media queries for screens 650px and down */
-
   @media screen and (max-width:650px) {
 
    #quiz-image img  {

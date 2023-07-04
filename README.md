@@ -11,7 +11,7 @@ The high states game is a quiz-based game that tests the user's knowledge of the
 ## UX design
 
 ### Colors
-* Keeping with the colours of the US flag theme, the color used for the questions is a navy blue #002868 and white
+* Keeping with the colours of the US flag theme, the color used for the questions is a navy blue #002868 and white.
 * The background color used is a form of grey #cfd4d8.
 
 ### Font
